@@ -1,0 +1,52 @@
+
+h1{color: green; 
+    background-color: aquamarine; 
+    border-top: 5px dotted red;
+    border-left: 5px dotted purple;
+    border-right: 5px dotted green;
+    margin-left: 10%;
+    margin-right: 55%;
+    background-clip: content-box;
+}
+h1:hover{color: black; background-color: yellow;}
+p { 
+    margin-top: -25px;
+    margin-left: 10%;
+    margin-right: 55%;
+    border-bottom: 5px dotted blue;
+    border-left: 5px dotted purple;
+    border-right: 5px dotted green;
+    background-color: orangered;
+    color: yellow;
+    background-clip: content-box;
+}
+#first { 
+    background-color: yellow;
+    width: 100px;
+    height: 200px;
+    border: 2px solid black;
+    float: left;
+}
+#second {
+    background-color: yellow;
+    width: 100px;
+    height: 200px;
+    border: 2px solid black;
+    float: left;
+    margin-left: 10px;
+}
+div {
+    background-color: yellow;
+    width: 100px;
+    height: 200px;
+    float: left;
+    margin-left: 10px;
+
+}
+.dark {
+    background-color: blue;
+    border: 2px solid red;
+    margin-top:1px;
+    
+
+}

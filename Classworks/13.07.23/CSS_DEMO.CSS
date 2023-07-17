@@ -1,0 +1,36 @@
+   /*per type*/
+   body {
+    margin-left: 20px;
+}
+h1 {color: blue;
+}
+/*per class*/
+.green-headline{color: green;
+}
+#black-headline {color: black;}
+.yellow-headline{color: yellow;}
+/* id*/
+#pcolor{color: green;}
+#pcolor:hover {color: orange;
+}
+/* type + attribute */
+input[type="text"]{width: 300;}
+/*background*/
+.button {
+    background-color: green;
+    
+    color: white;
+    border: 2px solid gray;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#gradient {
+    height: 100px;
+    width: 50%;
+     background: linear-gradient(red,blue);}
+     

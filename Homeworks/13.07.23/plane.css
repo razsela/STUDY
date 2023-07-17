@@ -1,0 +1,62 @@
+body {
+    background: url(mountains.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+
+}
+.moving {
+    background: url(plane-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position:0px;
+    position:relative;
+    width: 150px;
+    height: 160px;
+    border-radius: 100%;
+  
+}
+.moving {
+    animation: infinite;
+ 
+    -moz-animation-duration: 10s;
+    -webkit-animation-duration: 10s;
+    -moz-animation-name: slidein ;
+    -webkit-animation-name: slidein ;
+}
+div.a{
+   
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    
+  }
+@-moz-keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+    to {margin-left: -23%;
+    width: 100%;
+}
+}
+@-webkit-keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+    to {
+        margin-left: -23%;
+        width: 100%;
+    }
+}
+
+@keyframes example {
+    0%   {top:20px;}
+    25%  { top:250px;}
+    45%  {top: 100px;}
+    65%  {top:150px;}
+    100% {top: 100px}
+  }
