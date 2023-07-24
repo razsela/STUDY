@@ -1,3 +1,49 @@
-.first {
+.green{
+    color: green;
+    margin-left: 300px;
+    margin-top: 200px;
+  
+}
+#frame {
+    background-color: rgb(0, 255, 255);
+    width: 100px;
+    height: 100px;
+    border: 1px;
+    text-align: center;
+    font-size: 20px;
+
+}
+.red {
+    color: red;
+    margin-left: 600px;
+ margin-top: -120px;
+}
+.blue {
     color: blue;
+    margin-left: 900px;
+  margin-top: -120px;
+ 
+}
+.orange{
+    color: orange;
+    margin-left: 1200px;
+    margin-top: -120px;
+ 
+}
+body{
+    background: url(download.888.png);
+    background-repeat: no-repeat;
+    height: 730px;
+    width: 500px;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+   
+}
+.h1{
+color: black;
+background-color: aqua;
+width: 300px;
+margin-left: 600px;
 }
