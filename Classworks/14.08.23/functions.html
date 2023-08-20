@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p>Enter number: <input type="number" id="number1" /></p>
+<p><button onclick="clicked_button1()">Print number</button></p>
+
+<script>
+function clicked_button1() {
+    document.write('clicked button!')
+    const number1 = parseInt(document.getElementById('number1').value)
+}
+document.getElementById('Typed number').innerHTML = `<h1>${number1}</h1>`
+
+
+
+
+</script>
+</body>
+</html>

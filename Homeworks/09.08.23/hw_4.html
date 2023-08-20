@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="color: blue;">Welcome to my game!</h1>
+    <button onclick="play_game()">PLAY</button>
+    
+    <script>
+
+    
+      let player_points = 0
+      let computer_points = 0
+
+    function play_game() {
+      while (player_points < 5 && computer_points < 5 ){
+
+
+     let player_card = Math.floor ( Math.random() * 13) + 2
+     let computer_card = Math.floor ( Math.random() * 13) + 2
+
+    
+    if ( player_card > computer_card) {
+        document.write ( `<h1 style= "color: green"> You won! </h1>`)
+        player_points++
+    }
+    
+    else if (player_card == computer_card){
+        document.write ( ` <h1 style = "color : yellow"> It's Tie! </h1>`)
+    }
+    else { 
+        document.write (`<h1 style= "color: red"> You loss :( </h1>`)
+        computer_points++
+    }
+
+    document.write (`<h4> Player's card: </h4> <img src= "Images/${player_card}.png" />`)
+     document.write (`<h4> Computer's card: </h4> <img src= "Images/${computer_card}.png" />`)
+      }
+      if ( player_points == 5){
+        document.write ( `<h1 style= "color: green"> You won! ${player_points}--${computer_points}</h1>`)
+      }
+      else if ( computer_points == 5){
+        document.write ( `<h1 style= "color: red"> Computer won :( ${computer_points}--${player_points}</h1>`)
+      }
+    }
+  
+    </script>
+</body>
+</html>
