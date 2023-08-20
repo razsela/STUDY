@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var x , y , color
+     x = parseInt(prompt("Enter width: "))
+     y = parseInt(prompt("Enter heith: "))
+     color = prompt("Color please: ")
+     while ( x < 0 || y < 0) {
+        x = parseInt(prompt("Enter positive width: "))
+        y = parseInt(prompt("Enter positive height: "))
+     }
+     
+     document.write ( `<div style="width:${x}px; height:${y}px; background-color: ${color}; border: 5px; border-color: blue;"/>`)
+    </script>
+</body>
+</html>
