@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+
+function get_random(max_random){
+  return  Math.floor( Math.random ()* max_random )+1
+}
+
+function populate_list_random(capacity = 10, max_random = 100) {
+        const numbers = [ ]
+        
+        for (let i = 1; i <= capacity; i++) {
+            let number = get_random(max_random)
+            numbers.push(number)
+        }
+
+        return numbers;
+    }
+
+    function print_arrays(arr1, arr2) {
+        document.write(`<p>${arr1}</p>`)
+        document.write(`<p>${arr2}</p>`)
+    }
+ 
+const numbers1 = populate_list_random(10)
+const numbers2 = populate_list_random(10 , 200)
+ 
+print_arrays(numbers1, numbers2)
+
+function get_max(numbers){
+    let max = numbers[0]
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[ i ] > max){
+            max = numbers[ i ]
+            
+        }
+       
+    }
+    return max
+}  
+const max = get_max(numbers1)
+
+document.write(`<p>The biggest of first list is: ${max}</p>`)
+
+const max2 = get_max(numbers2)
+
+document.write(`<p>The biggest of second list is: ${max2}</p>`)
+
+
+
+    </script>
+</body>
+</html>

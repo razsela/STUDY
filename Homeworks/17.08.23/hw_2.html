@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Start: <input type="number" id="start_txt" ></p>
+    <p> Finish: <input type="number" id="finish_txt"></p>
+    <p> Skip: <input type="number" id="skip_txt"></p>
+    <p>  Zakif: <input type="number" id="zakif_txt"></p>
+
+    <button onclick="draw_result()">Draw result</button>
+
+    <script>
+
+    
+    function draw_result(){
+        const Start = parseInt(document.getElementById("start_txt").value)
+    const Finish = parseInt(document.getElementById("finish_txt").value)
+    const Skip = parseInt(document.getElementById("skip_txt").value)
+    const Zakif = parseInt(document.getElementById("zakif_txt").value)
+
+    for (let i = Start; i <= Finish; i++) {
+        if (i == Zakif){
+            break;
+        }
+        if (i % Skip == 0) {
+            continue;
+        }
+        document.write( `<P> ${i}</P>`)
+    }
+
+    }
+    </script>
+</body>
+</html>

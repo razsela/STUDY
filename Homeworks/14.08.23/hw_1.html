@@ -22,7 +22,7 @@
         for (let rows = 0; rows < user_rows; rows++){
         document.write( `<tr>`)
     for ( let columns = 0; columns<user_columns; columns++){
-        document.write ( `<td> ${rows+1}: ${columns+1} </td>`)
+        document.write ( `<td> ${Math.floor(Math.random()*16777215)}</td>`)
     }
 document.write( `</tr>`)
     }
