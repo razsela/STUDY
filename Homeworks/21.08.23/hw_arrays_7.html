@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+function smaller_than_50 (array){
+   
+   for (let i = 0; i < array.length; i++) {
+  
+           if (i < 50){
+               return "smaller then 50"
+           }
+           else if (i < 100 && i > 51){
+            return "between 51 to 100"
+           }
+           else if (i < 200 && i > 101){
+            return "between 101 to 200"
+           }
+           else if (i >= 200){
+            return "greater than 200"
+           }
+           else {
+            return " no condition is happening"
+           }
+
+   }
+
+ 
+}
+
+
+
+    </script>
+</body>
+</html>
