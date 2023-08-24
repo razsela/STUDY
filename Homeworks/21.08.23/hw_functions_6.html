@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+var day = parseInt(prompt ("Please enter a day of the week[number]"))
+
+function week_days(day){
+switch (day){
+    case 1:document.write('sunday')
+    break
+    case 2:document.write('Monday')
+    break
+    case 3: document.write ('Tuesday')
+    break
+    case 4:document.write('Wendsday')
+    break
+    case 5:document.write ('Thursday')
+    break
+    case 6:document.write ('Friday')
+    break
+    case 7:document.write ('Saturday')
+    default:
+        document.write ('Wrong day number')
+}
+}
+week_days(day)
+    </script>
+</body>
+</html>

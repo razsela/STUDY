@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+const a = [1,2,3,4,5]
+a.push(6)
+a.push(7)
+
+// const only_positive = [ ]
+// for (let i = 0; i < a.length; i++) {
+//   if ( a[ i ] > 0){
+//     only_positive.push(a [ i ])
+//   }
+// }
+// document.write(`only positive #1: ${only_positive} <br/>`)
+
+const only_positive2 = [ ]
+function add_positive(element){
+if (element > 0){
+    only_positive2.push (element)
+}
+}
+a.forEach(add_positive)
+
+document.write(`only positive #1: ${only_positive2} <br/>`)
+
+
+
+    </script>
+</body>
+</html>

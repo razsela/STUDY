@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+for (let i = 1; i <= 1; i++) {
+     
+        
+    let grade = parseInt(prompt( " Enter a grade[-99 to exit]"))
+    let sum = 0
+    let count = 0
+
+    while (grade != -99 ) {
+        count++
+        sum = sum + grade ;
+        grade = parseInt(prompt ( "Enter a grade [-99 to exit]"))
+    }
+    avg = sum / count 
+    
+    document.write ( ` this class has ${count} students. The avg is ${avg} </br>`)
+
+
+const zero_hundred = grade.filter(Element => Element < 0 && Element > 100)
+
+const list1 = grade.filter(Element => Element > avg)
+const list2 = grade.filter(Element => Element < avg)
+
+document.write(`${zero_hundred}`)
+document.write (`${list1}`)
+document.write (`${list2}`)
+}
+    </script>
+</body>
+</html>

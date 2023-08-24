@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+
+    <script>
+
+
+const array = []
+
+for (let i = 0; i < 4; i++) {
+    
+    const numbers= parseInt(prompt(`please enter number ${i+1}`))
+    array.push(numbers)
+    
+}
+function hr_print(element , index , arr){
+
+    if (index == 0){
+    document.write(`<hr ><div style = "color :green"> element:<b> ${element}</b></div> <div style="color:blue"> index: #${index}</div> <div style = "color: red "> array: ${arr}</div> <br/>`)
+
+}
+else if (index == array.length - 1){
+    document.write(`<hr ><div style = "color :pink"> element: ${element}</div> <div style="color:blue"> index: #${index}</div> <div style = "color: red "> array: ${arr}</div> <br/>`)
+
+}
+else {
+    document.write(`<hr ><div style = "color :green"> element: ${element}</div> <div style="color:blue"> index: #${index}</div> <div style = "color: red "> array: ${arr}</div> <br/>`)
+
+}
+}
+
+array.forEach(hr_print);
+
+
+    </script>
+</body>
+</html>
