@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+const rnd_list = [ ]
+
+function get_random(capacity = 10, max_random = 7){
+    return  Math.floor( Math.random ()* max_random )+1
+  }
+
+
+    
+    for (let i = 1; i <= 10; i++) {
+        let numbers = get_random(7)
+        rnd_list.push(numbers)
+    }
+    function print_element(get_random){
+    document.write(`<b> ${get_random}, </b> `)
+}
+ 
+
+rnd_list.forEach (print_element)
+
+let sum = 0
+   rnd_list.forEach((numbers) => {sum += numbers})
+    document.write ( ` <h3> The sum of the numbers  is: ${sum} </h3>`)
+
+
+    const bellow_five = rnd_list.filter(Element => Element < 5)
+    document.write(`<h3> <b>bellow 5: ${bellow_five} </b></h3>`)
+
+const rnd_list2 = rnd_list.map ((numbers) => {return numbers **2;})
+document.write(`<h3> <b>squared numbers: ${rnd_list2} </b></h3>`)
+
+ 
+const week_days = rnd_list.map ((numbers) => {switch (numbers){
+    case 1:document.write('<b>sunday ,')
+    break
+    case 2:document.write('<b>Monday ,')
+    break
+    case 3: document.write ('<b>Tuesday ,')
+    break
+    case 4:document.write('<b>Wendsday ,')
+    break
+    case 5:document.write ('<b>Thursday ,')
+    break
+    case 6:document.write ('<b>Friday ,')
+    break
+    case 7:document.write ('<b>Saturday ,')
+}
+}
+)
+
+
+
+
+    </script>
+</body>
+</html>
