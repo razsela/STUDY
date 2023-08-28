@@ -20,7 +20,7 @@ function get_random(capacity = 10, max_random = 7){
 
     
     for (let i = 1; i <= 10; i++) {
-        let numbers = get_random(7)
+        let numbers = get_random()
         rnd_list.push(numbers)
     }
     function print_element(get_random){
@@ -38,7 +38,7 @@ let sum = 0
     const bellow_five = rnd_list.filter(Element => Element < 5)
     document.write(`<h3> <b>bellow 5: ${bellow_five} </b></h3>`)
 
-const rnd_list2 = rnd_list.map ((numbers) => {return numbers **2;})
+const rnd_list2 = rnd_list.map ((numbers) =>  numbers **2 )
 document.write(`<h3> <b>squared numbers: ${rnd_list2} </b></h3>`)
 
  
