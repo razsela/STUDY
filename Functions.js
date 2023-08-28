@@ -28,3 +28,9 @@ function get_max(numbers){
     }
     return max
 }  
+//
+//
+
+function print(){
+    document.write()
+}

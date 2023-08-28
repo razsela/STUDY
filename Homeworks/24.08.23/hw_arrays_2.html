@@ -15,11 +15,26 @@ const names =  ["Emily", "Liam", "Sophia", "Noah", "Olivia", "Ethan", "Ava", "Ja
 
 
 
-  const tbl = document.createElement("table");
-  const tblBody = document.createElement("tbody");
+  document.write(" <table border=4> ")
+  document.write(" <tr> ")
+ names.forEach(element => document.write(`<td> ${element}</td>`))
+  document.write(" </tr>> ")
+  document.write(" </table> ")
 
- 
+const bellow_4 = names.filter (names => names.length <=4)
+document.write(` ${bellow_4} `)
 
+const higher_4 = names.filter (names => names.length >=4)
+document.write(` ${higher_4} `)
+
+const names_length = names.map(names => names.length)
+document.write(`${names_length} <br>`)
+
+const first_letter = names.map ( names => names[0])
+document.write(`${first_letter }<br>`)
+
+const e_present = names.filter (names => names.indexOf(`E`) >= 0 )
+document.write(`${e_present}`)
     </script>
 
 </body>
