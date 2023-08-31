@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="tic_tac_toe.js"></script>
+    <title>Tic-Tac-Toe</title>
+        <script src="tic_tac_toe.js"></script>
     <link rel="stylesheet" href="tic_tac_toe.css">
+   
 </head>
 <body>
-    <p id="ins">
+  <main class="background">
+    <section class="title">
+        <h1>Tic-Tac-Toe</h1>
+    </section>
+    <section class="display">
+        Player <span class="display-player playerX">X</span>'s turn
+    </section>
+    <section class="container">
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    <div class="tile" ></div>
+    </section>
+    <section class="display announcer hide"></section>
+    <section class="controls">
+        <button id="reset">Reset</button>
+    </section>
+</main>
+  
+  
+
+
+
+    <!-- <p id="ins">
         Game starts by just Tap on box<br><br>
         First Player starts as <b>Player X </b>
         And Second Player as <b>Player O</b>
@@ -24,7 +53,7 @@
     <div class="cell" id="cell-8" onclick="cell_click_o(8)">8</div>
     <div class="cell" id="cell-9" onclick="cell_click_x(9)">9</div>
 
-</div>
+</div> -->
 
 
 </body>
