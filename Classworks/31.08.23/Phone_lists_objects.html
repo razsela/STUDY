@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <P>Phone number: <input type="number" id="mobile_phone"><br>
+    <P>Phone brand: <input type="text" id="phone_brand"><br>
+    <P>Phone price: <input type="number" id="phone_price"><br>
+    <P>Phone color:   <input type="text" id="phone_color"><br>
+<button onclick="send_details()">object create</button>
+
+<div id="result"></div>
+    <script>
+
+list_of_phones = [ ]
+
+function send_details(){
+const number = parseFloat(document.getElementById(`mobile_phone`).value)
+const brand = (document.getElementById(`phone_brand`).value)
+const price = parseFloat(document.getElementById(`phone_price`).value)
+const color = (document.getElementById(`phone_color`).value)
+
+const phone = {
+    number : number,
+    brand : brand,
+    price : price ,
+    color : color 
+}
+list_of_phones.push (phone)
+console.log(list_of_phones)
+
+mobile_par = document.createElement('P')
+mobile_par.textContent = JSON.stringify(phone)
+document.getElementById(`result`).appendChild(mobile_par)
+}
+
+// list_of_phones.filter( x => x.price > 2000)
+   
+
+    </script>
+</body>
+</html>

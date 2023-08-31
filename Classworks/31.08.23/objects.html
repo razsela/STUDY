@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+const name = prompt('Enter your name:')
+const age = parseInt(prompt('Enter your age:'))
+const height = parseInt(prompt('Enter your height:'))
+const address = prompt('Enter your address:')
+
+const person1 = {
+    person_name : name,
+    person_age : age ,
+    person_height : height,
+    person_address : address
+}
+
+// function print_details(person1){
+// document.write (`<h1 style= "color: green ;">Your details are: </h1>`)
+// document.write (JSON.stringify(person1))
+// }
+
+
+// print_details(person1)
+function print_header(){
+document.write(`<h1 style= "color: green ">Your details are: </h1>`)
+}
+print_header(person1)
+for(let key in person1){
+    document.write(` ${person1[key]}<br>`)
+}
+
+    </script>
+</body>
+</html>

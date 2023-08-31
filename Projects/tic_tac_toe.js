@@ -63,12 +63,14 @@ window.addEventListener('DOMContentLoaded', () => {
         switch(type){
             case PLAYERO_WON:
                 announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+                player2_count++
                 break;
             case PLAYERX_WON:
                 announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+                player1_count++
                 break;
             case TIE:
-                announcer.innerText = 'Tie';
+                announcer.innerText = '<span style="border: 1px solid white; width: 100px; background-color: orange;>Tie</span>';
         }
         announcer.classList.remove('hide');
     };
@@ -125,13 +127,14 @@ window.addEventListener('DOMContentLoaded', () => {
     resetButton.addEventListener('click', resetBoard);
 });
 
-while ( PLAYERX_WON ){
-    player1_count++
-   
-   }
-document.write ( `Player x points:${player1_count}`)
 
+// function counter(player1_count , player2_count) {
+//     announcer.innerHTML = `Player x points:${player1_count}`
+//     announcer.innerHTML = `Player o points:${player2_count}`
 
+// }
+
+// counter(player1_count,player2_count)
 
 
 
