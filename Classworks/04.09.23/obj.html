@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+const person_age = prompt(parseInt('Enter age:'))
+
+const person = {
+    first_name : 'Jones' ,
+    last_name : 'Levi',
+    age : person_age,
+    print_full_name(person) {
+    document.write (` ${this.first_name} ${this.last_name}`)
+}
+
+}
+
+
+
+function print_age_after (after_years){
+    if (person_age == 12) {
+        document.write (`${person_age }`)
+    }
+    else {
+        document.write ( `${person_age + 12}`)
+    }
+}
+print_full_name(person)
+print_age_after()
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix</title>
+</head>
+<body>
+  
+    
+    <script>
+
+const arr = [1 , 2 , 3 , 4 ]
+for (let i = 0; i < arr.length; i++) {
+    document.write (`${i} -- ${arr[i]} <br> `)
+}
+const Matrix = [
+    [1 ,3 ,5 ,7],
+    [2, 4, 6, 8],
+    [5, -2, 8 , 4],
+    [3, 2, 7, 5]
+]
+for (let rows = 0; rows < Matrix.length; rows++) {
+    for (let col = 0; col < Matrix.length; col++) {
+    document.write ( ` ${Matrix[rows][col]} `)
+      
+    }
+document.write(`<br>`)
+}
+
+    </script>
+</body>
+</html>

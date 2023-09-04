@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+function create_point( x , y) {
+    const point = {
+        number_x : x ,
+        number_y : y ,
+        print(){
+    document.write (`${this.number_x} , ${this.number_y} <br>`)
+} ,
+if_equal(another_point){
+    return this.x == another_point.x && this.y == another_point.y
+}
+    }
+    return point
+}
+const point1 = create_point(10 , 5)
+const point2 = create_point(15 , 5)
+
+point1.print()
+point2.print()
+
+document.write (point1.if_equal(point2))
+
+    </script>
+</body>
+</html>

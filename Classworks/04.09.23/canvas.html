@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<canvas id="my_canvas" width="800" height="600"></canvas>
+<hr>
+<p>New point x <input type="number" id="x_txt" /></p>
+<p>New point y <input type="number" id="y_txt" /></p>
+<button id="btn_create" onclick="create_new_point()">Create point</button>
+<script>
+
+    
+
+const ctx = document.getElementById('my_canvas').getContext("2d")
+
+
+
+function create_new_point() {
+    const x = parseInt(document.getElementById('x_txt').value)
+    const y = parseInt(document.getElementById('y_txt').value)
+
+    ctx.beginPath()
+ctx.arc (50, 100, 5, 0, 2 * Math.PI)
+ctx.fillStyle = "red"
+ctx.fill()
+ctx.closePath()
+}
+</script>
+</body>
+</html>
