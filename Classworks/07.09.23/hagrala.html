@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Guess the number !</h1>
+<p>Number: <input type="number" id="number_txt" value="0" min="1" max="100"></p>
+<button onclick="try_guess()">TRY</button>
+
+<script>
+
+class Game {
+constructor(){
+    this.lucky_number = Math.floor(Math.random() * 100 ) + 1 
+}
+
+guess = parseInt(document.getElementById('number_txt').value)
+
+    try_guess(){
+    if (guess > lucky_number){
+        alert('Lower')
+    }
+    else if (guess < lucky_number){
+        alert('Higher')
+    }
+    else (guess == lucky_number)
+        alert('won')
+}
+
+}
+</script>
+</body>
+</html>

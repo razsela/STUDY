@@ -62,18 +62,34 @@ window.addEventListener('DOMContentLoaded', () => {
     const announce = (type) => {
         switch(type){
             case PLAYERO_WON:
-                announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+                Swal.fire({
+                    title: 'Player O won!',
+                    imageUrl: 'player_2_wins.png',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                  });
                 player2_count++
+                announcer.innerHTML = `Player o points: ${player2_count}`
                 break;
             case PLAYERX_WON:
-                announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
-                player1_count++
+                Swal.fire({
+                    title: 'Player X won!',
+                    imageUrl: 'player_1_wins.png',
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Custom image',
+                  });    
+            player1_count++
+            announcer.innerHTML  = `Player x points: ${player1_count}`
+            
                 break;
             case TIE:
                 announcer.innerText = '<span style="border: 1px solid white; width: 100px; background-color: orange;>Tie</span>';
         }
         announcer.classList.remove('hide');
     };
+  
 
     const isValidAction = (tile) => {
         if (tile.innerText === 'X' || tile.innerText === 'O'){
