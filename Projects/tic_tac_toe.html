@@ -15,14 +15,25 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 
 </head>
 <body>
+  
   <main class="background">
+   
+        
     <section class="title">
         <h1>Tic-Tac-Toe</h1>
     </section>
-    <section class="display">
+    <section class="display" id="turn1" style="display: none;">
         Player <span class="display-player playerX">X</span>'s turn
     </section>
-    <section class="container">
+
+    <section class="controls">
+        <button onclick="show_pattern()" id="btn_play_vs_player">Play vs player</button>
+        </section><br>
+        <section class="controls">
+        <button onclick="play_vs_bot()" id="btn_play_vs_bot">Play vs bot</button>
+        </section><br>
+
+    <section class="container" id="pattern1" >
     <div class="tile" ></div>
     <div class="tile" ></div>
     <div class="tile" ></div>
@@ -33,9 +44,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
     <div class="tile" ></div>
     <div class="tile" ></div>
     </section>
+
     <section class="display announcer hide"></section>
     <section class="controls">
-        <button id="reset">Reset</button>
+        <button id="reset">Reset ↻</button>
     </section>
 </main>
   

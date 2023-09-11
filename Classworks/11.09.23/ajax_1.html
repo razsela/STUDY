@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send AJAX</title>
+</head>
+<body>
+   
+    <button onclick="button_click()">SEND AJAX</button>
+    <input type="text" id="user_link">
+    <script>
+
+
+function button_click( ) {
+    
+
+let req = new XMLHttpRequest();
+const user_link1 = document.getElementById("user_link").value;
+
+req.open('GET', user_link1)
+
+req.onload = function () {
+    if (req.status >= 200 && req.status < 300) {
+        document.write(req.responseText)
+    }
+    else {
+        document.write('Error: ' +req.status)
+    }
+}
+
+req.send()
+
+}
+        // for (let i = 0; i < 100000; i++) {
+            
+        //     document.write(`${i} ,`)   
+        // }
+        // let i = 1000;
+        // setInterval(() => {
+        //     console.log(i--);
+        //     document.write (`${i} ,`)
+        // },
+        //  1000
+        // )
+        </script>
+</body>
+</html>

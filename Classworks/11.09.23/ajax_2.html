@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="button_click()">SEND AJAX</button>
+    <input type="text" id="user_link">
+
+    <table>
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>username</th>
+            <th>email</th>
+            </tr>
+        </thead>
+        <tbody id="table_html"></tbody>
+    </table>
+
+    <script>
+
+
+function button_click( ) {
+    
+
+let xhr = new XMLHttpRequest();
+const user_link1 = document.getElementById("user_link").value;
+const posttablebody = document.getElementById("table_html")
+xhr.open('GET', user_link1, true)
+
+xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 300) {
+        document.write(xhr.responseText)
+    
+    const data = JSON.parse(xhr.responseText).slice(0,10)
+    console.log(data);
+    data.forEach(user => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.username}</td>
+        <td>${user.email}</td>
+        <td>${JSON.stringify(user.address)}</td>
+        <td>${user.address.city}</td>
+        <td>${user.address.street}</td>
+        <td>${user.address.zipcode}</td>
+        <td>${user.geo}</td>
+        <td>${user.lat}</td>
+        <td>${user.address.geo.lng}</td>`;
+        posttablebody.appendChild(row);
+     });
+}
+    else {
+        document.write('Error: ' +req.status)
+    }
+}
+
+xhr.send()
+
+}
+
+   </script> 
+</body>
+</html>

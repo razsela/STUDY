@@ -1,3 +1,4 @@
+function play_vs_player(){
 window.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(document.querySelectorAll('.tile'));
     const playerDisplay = document.querySelector('.display-player');
@@ -119,7 +120,17 @@ window.addEventListener('DOMContentLoaded', () => {
             changePlayer();
         }
     }
-    
+
+    // function computer_play(){
+    //     if (isGameActive){
+    //         let cell = Math.floor (Math.random() * 9 ) +1
+    //     while(board[cell] != ""){
+    //         let cell = Math.floor (Math.random() * 9 ) +1
+    //     }
+    //     }
+    //     changePlayer((cell))
+    // }
+
     const resetBoard = () => {
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
@@ -142,6 +153,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
     resetButton.addEventListener('click', resetBoard);
 });
+}
+
+
+function show_pattern(){
+    var div1 = document.getElementById("pattern1");
+    var turn = document.getElementById("turn1");
+    var btn_player = document.getElementById("btn_play_vs_player");
+
+    if (div1.style.display = "none" ) {
+      return  div1.style.display = "grid" ,
+         turn.style.display == "block" ,
+        btn_player.style.display == "none" ;
+         
+    }  
+   
+
+    }  
+
 
 
 // function counter(player1_count , player2_count) {

@@ -44,6 +44,10 @@ padding-top: 69px;
     max-width: 300px;
 }
 
+#pattern1{
+    display:none;
+}
+
 .tile {
     border: 1px solid white;
     min-width: 100px;
@@ -81,6 +85,31 @@ padding-top: 69px;
     cursor: pointer;
 }
 
+#btn_play_vs_player {
+    background-color: #09C372;
+    padding: 8px;
+    color: black;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 5em;
+    margin-right: 5em;
+    cursor: pointer;
+    text-align: center;
+}
+
+#btn_play_vs_bot {
+    background-color: #09C372;
+    padding: 8px;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    margin-left: 5em;
+    margin-right: 5em;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
 
 
 
