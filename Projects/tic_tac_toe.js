@@ -167,7 +167,6 @@ function show_pattern(){
         btn_player.style.display == "none" ;
          
     }  
-   
 
     }  
 

@@ -6,22 +6,24 @@
 
 .background {
     
-background: url(menu_back.png);
-background-repeat: no-repeat;
-background-position: center;
--webkit-background-size:cover;
--moz-background-size:cover;
--o-background-size:cover;
-background-size: cover;
-       
-padding-top: 69px;
+    background: url(menu_back.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+	position: fixed;
 }
+
 
 .title {
     color: white;
     text-align: center;
     font-size: 40px;
     margin-top: 10%;
+   
 }
 
 .display {
