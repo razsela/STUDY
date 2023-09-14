@@ -19,10 +19,10 @@
 
 
 .title {
-    color: white;
+    color: rgb(10, 255, 67);
     text-align: center;
     font-size: 40px;
-    margin-top: 10%;
+    margin-top: 5%;
    
 }
 
@@ -41,6 +41,7 @@
 .container {
     margin: 0 auto;
     display: grid;
+    background-color: #0400ff1e;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
@@ -51,7 +52,7 @@
 }
 
 .tile {
-    border: 1px solid white;
+    border: 2px solid rgb(10, 255, 67);
     min-width: 100px;
     min-height: 100px;
     display: flex;
@@ -112,6 +113,29 @@
     align-items: center;
     text-align: center;
 }
+
+.mr{
+    position: relative;
+    margin: 0;
+    position: absolute;
+    margin-left: 90%;
+
+}
+  .mr{
+    animation: blinkMe 5s linear infinite;
+   }
+   @keyframes blinkMe {
+    0% {
+     opacity: 0.2;
+    }
+    50% {
+     opacity: 1;
+    }
+    100% {
+     opacity: 0.2;
+    }
+   }
+
 
 
 

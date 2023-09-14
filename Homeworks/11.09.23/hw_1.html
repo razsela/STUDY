@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+     
+    <div class="form-group">
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand">
+    </div><br>
+    <div class="form-group">
+        <label for="model">Model:</label>
+        <input type="text" id="model">
+    </div><br>
+    <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="number" id="year">
+    </div><br>
+    <div class="form-group">
+        <label for="color">Brand:</label>
+        <select id="color">
+            <option value="red">Red</option>
+            <option value="red">Green</option>
+            <option value="red">Blue</option>
+            <option value="red">Yellow</option>
+        </select>
+    </div><br>
+    <div class="form-group">
+        <label for="mileage">Mileage:</label>
+        <input type="number" id="mileage">
+    </div>
+    <div id="displayDiv"></div>
+  
+    <script>
+
+function create_car(car_brand, car_model, car_year, car_color, car_mileage ){
+const new_car = {
+    brand: car_brand,
+    model: car_model,
+    year: car_year,
+    color: car_color,
+    mileage: car_mileage
+}
+return new_car 
+}
+const car = create_car( '', '', 0, '', 0 )
+
+function print_car_object(){
+    
+let displayDiv = document.getElementById("displayDiv")
+displayDiv.innerHTML = `
+<P>brand: ${car.brand}</p>
+<P>model: ${car.model}</p>
+<P>year: ${car.year}</p>
+<P>color: ${car.color}</p>
+<P>mileage: ${car.mileage}</p>
+
+    `;
+}
+function displayvalues(){
+
+car.brand = document.getElementById('brand').value;
+car.model = document.getElementById('model').value;
+car.year = parseInt(document.getElementById('year').value)
+car.color =document.getElementById('color').value;
+car.mileage = parseInt(document.getElementById('mileage').value)
+
+console.log(car)
+
+print_car_object()
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    print_car_object()
+
+   const formElements = document.querySelectorAll('.form-group input , .form-group select')
+console.log(formElements)
+   formElements.forEach((element)=> {
+    element.addEventListener("input", displayvalues);
+   })
+})
+
+    </script>
+</body>
+</html>

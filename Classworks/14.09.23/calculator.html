@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+    <input type="number" id="num1" placeholder="Enter a number">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" placeholder="Enter another number">
+    <p>Result: <span id="result">0</span></p>
+
+    <script>
+        //
+        // create an object which conatins num1, num2, operator inside
+        // create a function which creates this object
+        // use the object num1 num2 operator, instead of the fields
+        // and/ or
+        // create class with constructor + set_ methods 
+        // and use it in the code
+
+
+        // Get references to the input elements and result span
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const operatorSelect = document.getElementById('operator');
+        const resultSpan = document.getElementById('result');
+
+        // Function to calculate and update the result
+        function calculate() {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+            const operator = operatorSelect.value;
+
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        result = 'Cannot divide by zero';
+                    }
+                    break;
+                default:
+                    result = 'Invalid operator';
+            }
+
+            resultSpan.textContent = result;
+        }
+
+        // Add event listeners to the input elements and dropdown
+        num1Input.addEventListener('input', calculate);
+        num2Input.addEventListener('input', calculate);
+        operatorSelect.addEventListener('change', calculate);
+
+        // Initial calculation
+        calculate();
+    </script>
+</body>
+</html>

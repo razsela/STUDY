@@ -19,41 +19,56 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
   <main class="background">
    
         
-    <section class="title">
-        <h1>Tic-Tac-Toe</h1>
-    </section>
-    <section class="display" id="turn1" style="display: none;">
-        Player <span class="display-player playerX">X</span>'s turn
-    </section>
+    <div>
+  
+        <u></u><u></u>
+         
+              
+          <section class="title">
+              <h1>Tic-Tac-Toe</h1>
+          </section>
+          <section class="display" id="turn1" style="display:none; color: rgb(10, 255, 67);" >
+              Player <span class="display-player playerX">X</span>'s turn
+          </section>
+      
+          <section class="controls">
+              <button id="btn_play_vs_player" onclick="show_pattern()">Play vs player</button>
+              </section><br>
+              <section class="controls">
+              <button id="btn_play_vs_bot" onclick="show_pattern()">Play vs bot</button>
+              </section><br>
+      <div></div>
+          
+      <section class="container" id="pattern1">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          </section>
+      
+          <section class="display announcer hide"></section>
+          <section class="controls">
+              <button id="reset">Reset ↻</button>
+          </section>
+      
+        
+      
 
-    <section class="controls">
-        <button onclick="show_pattern()" id="btn_play_vs_player">Play vs player</button>
-        </section><br>
-        <section class="controls">
-        <button onclick="play_vs_bot()" id="btn_play_vs_bot">Play vs bot</button>
-        </section><br>
-<div></div>
-    
-<section class="container" id="pattern1" >
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    <div class="tile" ></div>
-    </section>
+          <div class="mr"><footer   style="color: rgba(5, 255, 17, 0.997);"><b> Raz Sela 2023</b>&copy;</footer></div>
 
-    <section class="display announcer hide"></section>
-    <section class="controls">
-        <button id="reset">Reset ↻</button>
+          
+      
+      
+      </div>
     </section>
 </main>
   
   
-
 
 
     <!-- <p id="ins">
