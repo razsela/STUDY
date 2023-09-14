@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(document.querySelectorAll('.tile'));
     const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('#reset');
@@ -14,12 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let player1_count = 0;
     let player2_count = 0;
     let TIE_count = 0;
-    /*
-        Indexes within the board
-        [0] [1] [2]
-        [3] [4] [5]
-        [6] [7] [8]
-    */
 
     const winningConditions = [
         [0, 1, 2],
@@ -147,6 +141,35 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     resetButton.addEventListener('click', resetBoard);
+
+    function botMove() {
+        if (isGameActive && currentPlayer === 'O') {
+            setTimeout(() => {
+                const emptyTiles = tiles.filter(tile => tile.innerText === '');
+                if (emptyTiles.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * emptyTiles.length);
+                    const randomTile = emptyTiles[randomIndex];
+                    userAction(randomTile, tiles.indexOf(randomTile));
+                }
+            }, 500); // Delay for 0.5 seconds (500 milliseconds)
+        }
+    }
+
+    // Add an event listener to the "Play vs Bot" button
+    document.getElementById('btn_play_vs_bot').addEventListener('click', () => {
+        resetBoard();
+        currentPlayer = 'X'; // Start with the player X
+        isGameActive = true;
+        botMove(); // Make the first move for the bot
+    });
+    tiles.forEach((tile, index) => {
+        tile.addEventListener('click', () => {
+            if (isGameActive) {
+                userAction(tile, index);
+                botMove(); // Make the bot's move after the player's move
+            }
+        });
+    });
 });
 
 function show_pattern() {
