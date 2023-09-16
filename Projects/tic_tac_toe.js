@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const announcer = document.querySelector('.announcer');
     const btnPlayVsPlayer = document.getElementById('btn_play_vs_player');
     const btnPlayVsBot = document.getElementById('btn_play_vs_bot');
+    const menuButton = document.getElementById('menu');
 
     let board = ['', '', '', '', '', '', '', '', ''];
     let currentPlayer = 'X';
@@ -198,11 +199,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resetButton.addEventListener('click', resetBoard);
 
-    const menuButton = document.getElementById('menu');
     menuButton.addEventListener('click', () => {
-        // Reset the game and show the initial screen
+        // Hide the game elements and show the initial options
+        document.getElementById('pattern1').style.display = 'none';
+        document.getElementById('turn1').style.display = 'none';
+        document.getElementById('btn_play_vs_player').style.display = 'block';
+        document.getElementById('btn_play_vs_bot').style.display = 'block';
+        document.getElementById('score').style.display = 'none';
         resetBoard();
-        showMenu();
     });
     
 
