@@ -173,14 +173,15 @@
     font-size: 20px;
     /* margin-top: 10%; */
     margin-left: 1em;
-    margin-right: 70%;
+    margin-right: 80%;
+    margin-top: -10%;
 
 }
  .menu-button {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #09C372;
+    background-color: rgb(10, 255, 67);
     padding: 8px;
     color: black;
     border-radius: 5px;
