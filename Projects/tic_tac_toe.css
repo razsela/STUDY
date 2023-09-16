@@ -130,6 +130,7 @@
     padding: 8px;
     color: black;
     border-radius: 5px;
+    border: none;
     font-size: 20px;
     margin-left: 5em;
     margin-right: 5em;
@@ -150,7 +151,7 @@
     align-items: center;
     text-align: center;
 }
-#btn_play_vs_hard_bot {
+/* #btn_play_vs_hard_bot {
     background-color: #09C372;
     padding: 8px;
     color: black;
@@ -162,7 +163,7 @@
     cursor: pointer;
     align-items: center;
     text-align: center;
-}
+} */
 .score{
     background-color: rgb(10, 255, 67);
     padding: 8px;
@@ -191,8 +192,7 @@
 .mr{
     position: relative;
     position:absolute;
-    margin-left: 90%;
-    margin-top: -7%;
+    top: 90%;
 }
   /* .mr{ */
     /* animation: blinkMe 5s infinite;
