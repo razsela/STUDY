@@ -28,17 +28,18 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
               <h1>Tic-Tac-Toe</h1>
           </section>
           <section class="display" id="turn1" style="display:none; color: rgb(10, 255, 67);" >
-              Player <span class="display-player playerX">X</span>'s turn
+             <span class="display-player playerX">X</span>
           </section>
       
+          <button id="menu" class="menu-button">Menu</button>
+          
           <section class="controls">
               <button id="btn_play_vs_player" onclick="show_pattern()">Play vs player</button>
+           <br>
+              <button id="btn_play_vs_bot" onclick="show_pattern()">Play vs easy bot</button>
               </section><br>
-              <section class="controls">
-              <button id="btn_play_vs_bot" onclick="show_pattern()">Play vs bot</button>
-              </section><br>
-      <div></div>
-          
+              
+              
       <section class="container" id="pattern1">
           <div class="tile"></div>
           <div class="tile"></div>
@@ -57,6 +58,11 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
           </section>
       
         
+          <div class="score" id="score" style="display: none;">
+            <p>Player X Score: <span id="playerXScore">0</span></p>
+            <p>Player O Score: <span id="playerOScore">0</span></p>
+            <p>TIE Score: <span id="tiescore">0</span></p>
+        </div>
       
 
           <div class="mr"><footer   style="color: rgba(5, 255, 17, 0.997);"><b> Raz Sela 2023</b>&copy;</footer></div>

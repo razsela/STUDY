@@ -3,18 +3,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('#reset');
     const announcer = document.querySelector('.announcer');
+    const btnPlayVsPlayer = document.getElementById('btn_play_vs_player');
+    const btnPlayVsBot = document.getElementById('btn_play_vs_bot');
 
     let board = ['', '', '', '', '', '', '', '', ''];
     let currentPlayer = 'X';
-    let isGameActive = true;
-
-    const PLAYERX_WON = 'PLAYERX_WON';
-    const PLAYERO_WON = 'PLAYERO_WON';
-    const TIE = 'TIE';
+    let isGameActive = false; // Initialize as false
+    let isBotTurn = false;
     let player1_count = 0;
     let player2_count = 0;
     let TIE_count = 0;
 
+    // Initialize scores from localStorage or default to 0
+    player1_count = parseInt(document.getElementById('playerXScore')) || 0;
+    player2_count = parseInt(document.getElementById('playerOScore')) || 0;
+    TIE_count = parseInt(document.getElementById('playerOScore')) || 0;
+    // Display scores
+    updateScores();
+
+    function updateScores() {
+        localStorage.setItem('playerXScore', player1_count);
+        localStorage.setItem('playerOScore', player2_count);
+        localStorage.setItem('tiescore', TIE_count);
+        document.getElementById('playerXScore').innerText = player1_count;
+        document.getElementById('playerOScore').innerText = player2_count;
+        document.getElementById('tiescore').innerText = TIE_count;
+    }
+
+    // Winning conditions
     const winningConditions = [
         [0, 1, 2],
         [3, 4, 5],
@@ -28,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleResultValidation() {
         let roundWon = false;
-        for (let i = 0; i <= 7; i++) {
+        for (let i = 0; i < winningConditions.length; i++) {
             const winCondition = winningConditions[i];
             const a = board[winCondition[0]];
             const b = board[winCondition[1]];
@@ -43,19 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (roundWon) {
-            announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
+            announce(currentPlayer === 'X' ? 'PLAYERX_WON' : 'PLAYERO_WON');
             isGameActive = false;
             return;
         }
 
         if (!board.includes('')) {
-            announce(TIE);
+            announce('TIE');
         }
     }
 
-    const announce = (type) => {
-        switch(type) {
-            case PLAYERO_WON:
+    function announce(result) {
+        switch (result) {
+            case 'PLAYERO_WON':
                 Swal.fire({
                     title: 'Player O won!',
                     imageUrl: 'player_2_wins.png',
@@ -64,9 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     imageAlt: 'Custom image',
                 });
                 player2_count++;
-                announcer.innerHTML = `Player o points: ${player2_count}`;
+                updateScores();
                 break;
-            case PLAYERX_WON:
+            case 'PLAYERX_WON':
                 Swal.fire({
                     title: 'Player X won!',
                     imageUrl: 'player_1_wins.png',
@@ -75,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     imageAlt: 'Custom image',
                 });
                 player1_count++;
-                announcer.innerHTML = `Player x points: ${player1_count}`;
+                updateScores();
                 break;
-            case TIE:
+            case 'TIE':
                 Swal.fire({
                     title: "It's a TIE !",
                     imageUrl: 'tie_game.png',
@@ -85,62 +101,57 @@ document.addEventListener('DOMContentLoaded', () => {
                     imageHeight: 200,
                     imageAlt: 'Custom image',
                 });
-                TIE_count++;   
-                announcer.innerHTML = `TIE points: ${TIE_count}`;
-            }
+                TIE_count++;
+                updateScores();
+                    }
         announcer.classList.remove('hide');
-    };
+    }
 
-    const isValidAction = (tile) => {
-        if (tile.innerText === 'X' || tile.innerText === 'O') {
-            return false;
-        }
+    function isValidAction(tile) {
+        return tile.innerText === '';
+    }
 
-        return true;
-    };
-
-    const updateBoard = (index) => {
+    function updateBoard(index) {
         board[index] = currentPlayer;
-    };
+    }
 
-    const changePlayer = () => {
+    function changePlayer() {
         playerDisplay.classList.remove(`player${currentPlayer}`);
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        playerDisplay.innerText = currentPlayer;
+        playerDisplay.innerText = `Player ${currentPlayer}'s Turn`;
         playerDisplay.classList.add(`player${currentPlayer}`);
-    };
+    }
 
-    const userAction = (tile, index) => {
+    function userAction(tile, index) {
         if (isValidAction(tile) && isGameActive) {
             tile.innerText = currentPlayer;
             tile.classList.add(`player${currentPlayer}`);
             updateBoard(index);
             handleResultValidation();
             changePlayer();
+            if (isBotTurn) {
+                botMove();
+            }
         }
-    };
+    }
 
-    const resetBoard = () => {
+    function resetBoard() {
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
+        isBotTurn = false;
         announcer.classList.add('hide');
 
-        if (currentPlayer === 'O') {
-            changePlayer();
-        }
+        currentPlayer = 'X';
+        playerDisplay.innerText = `Player ${currentPlayer}'s Turn`;
+        playerDisplay.classList.remove('playerO');
+        playerDisplay.classList.add('playerX');
 
         tiles.forEach(tile => {
             tile.innerText = '';
             tile.classList.remove('playerX');
             tile.classList.remove('playerO');
         });
-    };
-
-    tiles.forEach((tile, index) => {
-        tile.addEventListener('click', () => userAction(tile, index));
-    });
-
-    resetButton.addEventListener('click', resetBoard);
+    }
 
     function botMove() {
         if (isGameActive && currentPlayer === 'O') {
@@ -150,26 +161,51 @@ document.addEventListener('DOMContentLoaded', () => {
                     const randomIndex = Math.floor(Math.random() * emptyTiles.length);
                     const randomTile = emptyTiles[randomIndex];
                     userAction(randomTile, tiles.indexOf(randomTile));
+                    botMove(); // Call botMove again for the next move
                 }
-            }, 500); // Delay for 0.5 seconds (500 milliseconds)
+            }, 500);
         }
     }
 
-    // Add an event listener to the "Play vs Bot" button
-    document.getElementById('btn_play_vs_bot').addEventListener('click', () => {
+    btnPlayVsPlayer.addEventListener('click', () => {
         resetBoard();
-        currentPlayer = 'X'; // Start with the player X
+        currentPlayer = 'X';
         isGameActive = true;
-        botMove(); // Make the first move for the bot
-    });
-    tiles.forEach((tile, index) => {
-        tile.addEventListener('click', () => {
-            if (isGameActive) {
-                userAction(tile, index);
-                botMove(); // Make the bot's move after the player's move
-            }
+        isBotTurn = false;
+        tiles.forEach((tile, index) => {
+            tile.addEventListener('click', () => userAction(tile, index));
         });
     });
+
+    btnPlayVsBot.addEventListener('click', () => {
+        resetBoard();
+        currentPlayer = 'X';
+        isGameActive = true;
+        isBotTurn = true; // Enable bot's turn
+    
+        // Remove existing click event listeners from tiles
+        tiles.forEach((tile, index) => {
+            tile.removeEventListener('click', () => userAction(tile, index));
+        });
+    
+        // Add new click event listeners for user actions
+        tiles.forEach((tile, index) => {
+            tile.addEventListener('click', () => userAction(tile, index));
+        });
+    
+        botMove(); // Start the bot's move
+    });
+
+    resetButton.addEventListener('click', resetBoard);
+
+    const menuButton = document.getElementById('menu');
+    menuButton.addEventListener('click', () => {
+        // Reset the game and show the initial screen
+        resetBoard();
+        showMenu();
+    });
+    
+
 });
 
 function show_pattern() {
@@ -177,9 +213,10 @@ function show_pattern() {
     var turn = document.getElementById("turn1");
     var btn_player = document.getElementById("btn_play_vs_player");
     var btn_bot = document.getElementById("btn_play_vs_bot");
+    var score = document.getElementById("score");
     div1.style.display = "grid";
     turn.style.display = "";
     btn_player.style.display = "none";
     btn_bot.style.display = "none";
-
+    score.style.display = "";
 }
