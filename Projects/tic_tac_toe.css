@@ -131,9 +131,10 @@
     color: black;
     border-radius: 5px;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 5em;
     margin-right: 5em;
+    margin-top: 5%;
     cursor: pointer;
     text-align: center;
 }
@@ -144,9 +145,10 @@
     color: black;
     border-radius: 5px;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 5em;
     margin-right: 5em;
+    margin-top: 5%;
     cursor: pointer;
     align-items: center;
     text-align: center;

@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetBoard() {
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
-        isBotTurn = false;
+        isBotTurn = true;
         announcer.classList.add('hide');
 
         currentPlayer = 'X';
@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tile.classList.remove('playerX');
             tile.classList.remove('playerO');
         });
+        
     }
 
     function botMove() {
@@ -206,8 +207,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('btn_play_vs_player').style.display = 'block';
         document.getElementById('btn_play_vs_bot').style.display = 'block';
         document.getElementById('score').style.display = 'none';
+        document.getElementById("reset").style.display = 'none';
         resetBoard();
+
+        player1_count = 0;
+        player2_count = 0;
+        TIE_count = 0;
+        updateScores();
+
     });
+    
     
 
 });
@@ -218,9 +227,11 @@ function show_pattern() {
     var btn_player = document.getElementById("btn_play_vs_player");
     var btn_bot = document.getElementById("btn_play_vs_bot");
     var score = document.getElementById("score");
+    var btn_reset = document.getElementById("reset");
     div1.style.display = "grid";
     turn.style.display = "";
     btn_player.style.display = "none";
     btn_bot.style.display = "none";
     score.style.display = "";
+    btn_reset.style.display = "";
 }
