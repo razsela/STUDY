@@ -1,5 +1,6 @@
 const cards = document.querySelectorAll('.tile');
 
+let clicks = 0;
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -9,6 +10,7 @@ function flipCard() {
     if (this === firstCard) return;
 
     this.classList.add('flip');
+    clicks += 1; 
 
     if (!hasFlippedCard) {
         hasFlippedCard = true;
@@ -20,17 +22,20 @@ function flipCard() {
     hasFlippedCard = false;
 
     checkForMatch();
+    updateScores(); 
 }
 
 function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
+    firstCard = null;
+    secondCard = null;
+    hasFlippedCard = false;
+    lockBoard = false;
 }
 
 function checkForMatch() {
-const img1 = firstCard.querySelector("img")
-const img2 = secondCard.querySelector("img")
-let isMatch = img1.src === img2.src;
+    const img1 = firstCard.querySelector("img")
+    const img2 = secondCard.querySelector("img")
+    let isMatch = img1.src === img2.src;
 
     if (isMatch) {
         disableCards();
@@ -49,6 +54,12 @@ function disableCards() {
 }
 
 function unflipCards() {
+    if (!firstCard || !secondCard) {
+        // Check if firstCard or secondCard is null or undefined
+        resetBoard();
+        return;
+    }
+
     lockBoard = true;
     setTimeout(() => {
         firstCard.classList.remove('flip');
@@ -66,12 +77,25 @@ function shuffle() {
     });
 }
 
-function reset_btn(){
-    unflipCards()
-    shuffle()
-    
-}
 
+    function reset_btn() {
+        lockBoard = true;
+        cards.forEach(card => card.classList.remove('flip'));
+        setTimeout(() => {
+            resetBoard();
+            shuffle();
+            clicks = 0;
+            updateScores();
+    
+            lockBoard = false;
+        }, 500);
+    }
+     
+
+
+function updateScores() {
+    document.getElementById('clicks').innerText = clicks;
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
