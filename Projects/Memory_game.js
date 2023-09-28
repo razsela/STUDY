@@ -75,11 +75,12 @@ function shuffle() {
         let randomPos = Math.floor(Math.random() * 16);
         card.style.order = randomPos;
     });
+    cards.forEach(card => card.addEventListener('click', flipCard));
 }
 
 
     function reset_btn() {
-        lockBoard = true;
+       
         cards.forEach(card => card.classList.remove('flip'));
         setTimeout(() => {
             resetBoard();
@@ -87,7 +88,7 @@ function shuffle() {
             clicks = 0;
             updateScores();
     
-            lockBoard = false;
+        
         }, 500);
     }
      
