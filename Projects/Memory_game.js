@@ -37,7 +37,7 @@ let isMatch = img1.src === img2.src;
     } else {
         setTimeout(() => {
             unflipCards();
-        }, 1000);
+        }, 500);
     }
 }
 
@@ -56,7 +56,7 @@ function unflipCards() {
 
         lockBoard = false;
         resetBoard();
-    }, 1000);
+    }, 500);
 }
 
 function shuffle() {
@@ -64,6 +64,12 @@ function shuffle() {
         let randomPos = Math.floor(Math.random() * 16);
         card.style.order = randomPos;
     });
+}
+
+function reset_btn(){
+    unflipCards()
+    shuffle()
+    
 }
 
 
