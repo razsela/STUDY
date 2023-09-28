@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Itim', cursive;
+}
+body {
+  height: 100vh;
+  display: flex;
+
+}
+.background {
+    
+  background: url(spongebob_background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+}
+
+#title {
+  color: rgb(255, 10, 247);
+  text-align: center;
+  font-size: 32px;
+  margin-top: 5%;
+  max-width: fit-content;
+  margin-left: 35%;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(4, 120px);
+    grid-gap: 5px;
+    max-width: 300px;
+    margin-left: 35%;
+    margin-top: 3%;
+    perspective: 1000px;
+}
+
+.tile {
+  width: repeat(4, 100px);
+  height: repeat(4 , 100px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  cursor: pointer;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background: pink;
+  backface-visibility: hidden;
+}
+
+.tile:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+.tile.flip {
+  transform: rotateY(180deg);
+}
+.front-face {
+  transform: rotateY(180deg);
+
+}
+
+#reset_btn {
+  background-color: rgb(255, 10, 247);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  margin-left: 49%;
+  cursor: pointer;
+  transition: transform .5s;
+  transform: scale(1);
+}
+#reset:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+
+}

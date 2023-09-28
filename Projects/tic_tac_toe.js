@@ -9,17 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let board = ['', '', '', '', '', '', '', '', ''];
     let currentPlayer = 'X';
-    let isGameActive = false; // Initialize as false
+    let isGameActive = false;
     let isBotTurn = false;
     let player1_count = 0;
     let player2_count = 0;
     let TIE_count = 0;
 
-    // Initialize scores from localStorage or default to 0
+
     player1_count = parseInt(document.getElementById('playerXScore')) || 0;
     player2_count = parseInt(document.getElementById('playerOScore')) || 0;
     TIE_count = parseInt(document.getElementById('playerOScore')) || 0;
-    // Display scores
     updateScores();
 
     function updateScores() {
@@ -104,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 TIE_count++;
                 updateScores();
-                    }
+        }
         announcer.classList.remove('hide');
     }
 
@@ -139,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetBoard() {
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
-        isBotTurn = true;
         announcer.classList.add('hide');
 
         currentPlayer = 'X';
@@ -152,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tile.classList.remove('playerX');
             tile.classList.remove('playerO');
         });
-        
+
     }
 
     function botMove() {
@@ -183,25 +181,23 @@ document.addEventListener('DOMContentLoaded', () => {
         resetBoard();
         currentPlayer = 'X';
         isGameActive = true;
-        isBotTurn = true; // Enable bot's turn
-    
-        // Remove existing click event listeners from tiles
+        isBotTurn = true;
+
         tiles.forEach((tile, index) => {
             tile.removeEventListener('click', () => userAction(tile, index));
         });
-    
-        // Add new click event listeners for user actions
+
         tiles.forEach((tile, index) => {
             tile.addEventListener('click', () => userAction(tile, index));
         });
-    
-        botMove(); // Start the bot's move
+
+        botMove();
     });
 
     resetButton.addEventListener('click', resetBoard);
 
     menuButton.addEventListener('click', () => {
-        // Hide the game elements and show the initial options
+
         document.getElementById('pattern1').style.display = 'none';
         document.getElementById('turn1').style.display = 'none';
         document.getElementById('btn_play_vs_player').style.display = 'block';
@@ -216,8 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateScores();
 
     });
-    
-    
+
+
 
 });
 

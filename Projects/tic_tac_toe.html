@@ -1,103 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
-        <script src="tic_tac_toe.js"></script>
+    <script src="tic_tac_toe.js"></script>
     <link rel="stylesheet" href="tic_tac_toe.css">
     <script src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
 "></script>
-<link href="
+    <link href="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
 " rel="stylesheet">
 
 </head>
+
 <body>
-  
-  <main class="background">
-   
-        
-    <div>
-  
-        <u></u><u></u>
-         
-              
-          <section class="rotating" id="title">
-              <h1>Tic-Tac-Toe</h1>
-          </section>
-          <section class="display" id="turn1" style="display:none; color: rgb(10, 255, 67);" >
-             <span class="display-player playerX">X</span>
-          </section>
-      
-          <!-- <button id="menu" class="menu-button">Menu</button> -->
-          <button id="menu" class="menu-button" onclick="points_reset_menu()">Menu</button>
-          
-          <section class="controls">
-              <button id="btn_play_vs_player" onclick="show_pattern()">Play vs player</button>
-           <br><br>
-          </section>
-          <section class="controls">
-              <button id="btn_play_vs_bot" onclick="show_pattern()">Play vs bot</button>
-              </section><br>
-              
-              
-      <section class="container" id="pattern1">
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          </section>
-      
-          <section class="display announcer hide"></section>
-          <section class="controls">
-              <button id="reset" style="display: none;">Reset ↻</button>
-          </section>
-      
-        
-          <div class="score" id="score" style="display: none;">
-            <p>Player X Score: <span id="playerXScore">0</span></p>
-            <p>Player O Score: <span id="playerOScore">0</span></p>
-            <p>TIE Score: <span id="tiescore">0</span></p>
+
+    <main class="background">
+
+
+        <div>
+
+            <u></u><u></u>
+
+
+            <section class="rotating" id="title">
+                <h1>Tic-Tac-Toe</h1>
+            </section>
+            <section class="display" id="turn1" style="display:none; color: rgb(10, 255, 67);">
+                <span class="display-player playerX">X</span>
+            </section>
+
+            <!-- <button id="menu" class="menu-button">Menu</button> -->
+            <button id="menu" class="menu-button" onclick="points_reset_menu()">Menu</button>
+
+            <section class="controls">
+                <button id="btn_play_vs_player" onclick="show_pattern()">Play vs player</button>
+                <br><br>
+            </section>
+            <section class="controls">
+                <button id="btn_play_vs_bot" onclick="show_pattern()">Play vs bot</button>
+            </section><br>
+
+
+            <section class="container" id="pattern1">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </section>
+
+            <section class="display announcer hide"></section>
+            <section class="controls">
+                <button id="reset" style="display: none;">Reset ↻</button>
+            </section>
+
+
+            <div class="score" id="score" style="display: none;">
+                <p>Player X Score: <span id="playerXScore">0</span></p>
+                <p>Player O Score: <span id="playerOScore">0</span></p>
+                <p>TIE Score: <span id="tiescore">0</span></p>
+            </div>
+
+
+            <div class="mr">
+                <footer style="color: rgba(5, 255, 17, 0.997);"><b> Raz Sela 2023</b>&copy;</footer>
+            </div>
+
+
+
+
         </div>
-      
-
-          <div class="mr"><footer   style="color: rgba(5, 255, 17, 0.997);"><b> Raz Sela 2023</b>&copy;</footer></div>
-
-          
-      
-      
-      </div>
-    </section>
-</main>
-  
-  
+        </section>
+    </main>
 
 
-    <!-- <p id="ins">
-        Game starts by just Tap on box<br><br>
-        First Player starts as <b>Player X </b>
-        And Second Player as <b>Player O</b>
-  </p>
-<div id="container" class="board">
-    <div class="cell" id="cell-1" onclick="cell_click_x(1)">1</div>
-    <div class="cell" id="cell-2" onclick="cell_click_o(2)">2</div>
-    <div class="cell" id="cell-3" onclick="cell_click_x(3)">3</div>
-    <div class="cell" id="cell-4" onclick="cell_click_o(4)">4</div>
-    <div class="cell" id="cell-5" onclick="cell_click_x(5)">5</div>
-    <div class="cell" id="cell-6" onclick="cell_click_o(6)">6</div>
-    <div class="cell" id="cell-7" onclick="cell_click_x(7)">7</div>
-    <div class="cell" id="cell-8" onclick="cell_click_o(8)">8</div>
-    <div class="cell" id="cell-9" onclick="cell_click_x(9)">9</div>
 
-</div> -->
+
 
 
 </body>
+
 </html>
