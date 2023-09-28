@@ -28,14 +28,15 @@ function resetBoard() {
 }
 
 function checkForMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+const img1 = firstCard.querySelector("img")
+const img2 = secondCard.querySelector("img")
+let isMatch = img1.src === img2.src;
 
     if (isMatch) {
         disableCards();
     } else {
         setTimeout(() => {
             unflipCards();
-            resetBoard();
         }, 1000);
     }
 }
@@ -49,14 +50,13 @@ function disableCards() {
 
 function unflipCards() {
     lockBoard = true;
-
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
         lockBoard = false;
         resetBoard();
-    }, 1500);
+    }, 1000);
 }
 
 function shuffle() {
@@ -65,6 +65,7 @@ function shuffle() {
         card.style.order = randomPos;
     });
 }
+
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
