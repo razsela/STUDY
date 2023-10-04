@@ -10,7 +10,7 @@ function flipCard() {
     if (this === firstCard) return;
 
     this.classList.add('flip');
-    clicks += 1; 
+    clicks += 1;
 
     if (!hasFlippedCard) {
         hasFlippedCard = true;
@@ -22,7 +22,7 @@ function flipCard() {
     hasFlippedCard = false;
 
     checkForMatch();
-    updateScores(); 
+    updateScores();
 }
 
 function resetBoard() {
@@ -79,19 +79,18 @@ function shuffle() {
 }
 
 
-    function reset_btn() {
-       
-        cards.forEach(card => card.classList.remove('flip'));
-        setTimeout(() => {
-            resetBoard();
-            shuffle();
-            clicks = 0;
-            updateScores();
-    
-        
-        }, 500);
-    }
-     
+function reset_btn() {
+
+    cards.forEach(card => card.classList.remove('flip'));
+    setTimeout(() => {
+        resetBoard();
+        shuffle();
+        clicks = 0;
+        updateScores();
+
+    }, 500);
+}
+
 
 
 function updateScores() {
@@ -101,3 +100,48 @@ function updateScores() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 shuffle();
+
+function show_pattern() {
+    var board = document.getElementById('pattern1')
+    var reset_btn1 = document.getElementById('reset_btn')
+    var play_btn = document.getElementById('spongebob_btn')
+    var counter = document.getElementById('counter')
+    var shoes_btn = document.getElementById('shoes_btn')
+    shoes_btn.style.display = 'none';
+    board.style.display = 'grid'
+    reset_btn1.style.display = ''
+    play_btn.style.display = 'none'
+    counter.style.display = ''
+}
+
+
+const menuButton = document.getElementById('menu');
+menuButton.addEventListener('click', () => {
+
+    document.getElementById('pattern1').style.display = 'none';
+    document.getElementById('counter').style.display = 'none';
+    document.getElementById('spongebob_btn').style.display = '';
+    document.getElementById('reset_btn').style.display = 'none';
+    document.getElementById('shoes_btn').style.display = '';
+
+    
+
+    clicks = 0;
+    updateScores();
+    reset_btn();
+
+});
+
+function show_shoes() {
+    var board = document.getElementById('pattern1')
+    var reset_btn1 = document.getElementById('reset_btn')
+    var play_btn = document.getElementById('spongebob_btn')
+    var counter = document.getElementById('counter')
+    var shoes_btn = document.getElementById('shoes_btn')
+    shoes_btn.style.display = 'none';
+    board.style.display = 'grid'
+    reset_btn1.style.display = ''
+    play_btn.style.display = 'none'
+    counter.style.display = ''
+
+}
