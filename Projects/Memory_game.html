@@ -11,7 +11,7 @@
 <body>
 
 
-    <main class="background">
+    <main id="background">
 
 
         <div>
@@ -23,89 +23,91 @@
                 <h1><B>It's A Memory Game...</b></h1>
             </section>
 
-
+            <section id="select_subject">
+                <h1><B>Select subject:</b></h1>
+            </section>
             <button id="menu" class="menu-button"><b>Menu</b></button>
 
             <section id="counter" style="display: none;">
                 <h3><B>clicks: <span id="clicks">0</span></B></h3>
             </section>
 
-            <button id="spongebob_btn" onclick="show_pattern()"><B>Play spongebob!</B></button>
-            <button id="shoes_btn" onclick="show_shoes()"><B>Play shoes!</B></button>
+            <button id="spongebob_btn" onclick="show_spongebob()"><B>Spongebob</B></button>
+            <button id="shoes_btn" onclick="show_shoes()"><B>Shoes</B></button>
+            <button id="cars_btn" onclick="show_cars()"><B>Cars logo</B></button>
 
 
             <section class="container" id="pattern1" style="display: none;">
                 <div class="tile" id="a1">
-                    <img class="front-face" src="images/spongebob_character.png" id="Pair-1">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-1_back">
+                    <img class="front-face" src="" id="Pair-1">
+                    <img class="back-face" src="" id="pair-1_back">
                 </div>
                 <div class="tile" id="a2">
-                    <img class="front-face" src="images/spongebob_character.png" id="Pair-1">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-1_back">
+                    <img class="front-face" src="" id="Pair-1">
+                    <img class="back-face" src="" id="pair-1_back">
                 </div>
                 <div class="tile" id="a3">
-                    <img class="front-face" src="images/patrick.png" id="Pair-2">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-2_back">
+                    <img class="front-face" src="" id="Pair-2">
+                    <img class="back-face" src="" id="pair-2_back">
                 </div>
                 <div class="tile" id="a4">
-                    <img class="front-face" src="images/patrick.png" id="Pair-2">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-2_back">
+                    <img class="front-face" src="" id="Pair-2">
+                    <img class="back-face" src="" id="pair-2_back">
                 </div>
                 <div class="tile" id="a5">
-                    <img class="front-face" src="images/mr_crabs.png" id="Pair-3">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-3_back">
+                    <img class="front-face" src="" id="Pair-3">
+                    <img class="back-face" src="" id="pair-3_back">
                 </div>
                 <div class="tile" id="a6">
-                    <img class="front-face" src="images/mr_crabs.png" id="Pair-3">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-3_back">
+                    <img class="front-face" src="" id="Pair-3">
+                    <img class="back-face" src="" id="pair-3_back">
                 </div>
                 <div class="tile" id="a7">
-                    <img class="front-face" src="images/mrs_puff.png" id="Pair-4">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-4_back">
+                    <img class="front-face" src="" id="Pair-4">
+                    <img class="back-face" src="" id="pair-4_back">
                 </div>
                 <div class="tile" id="a8">
-                    <img class="front-face" src="images/mrs_puff.png" id="Pair-4">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-4_back">
+                    <img class="front-face" src="" id="Pair-4">
+                    <img class="back-face" src="" id="pair-4_back">
                 </div>
                 <div class="tile" id="a9">
-                    <img class="front-face" src="images/plankton.png" id="Pair-5">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-5_back">
+                    <img class="front-face" src="" id="Pair-5">
+                    <img class="back-face" src="" id="pair-5_back">
                 </div>
                 <div class="tile" id="a10">
-                    <img class="front-face" src="images/plankton.png" id="Pair-5">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-5_back">
+                    <img class="front-face" src="" id="Pair-5">
+                    <img class="back-face" src="" id="pair-5_back">
                 </div>
                 <div class="tile" id="a11">
-                    <img class="front-face" src="images/pearl.png" id="Pair-6">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-6_back">
+                    <img class="front-face" src="" id="Pair-6">
+                    <img class="back-face" src="" id="pair-6_back">
                 </div>
                 <div class="tile" id="a12">
-                    <img class="front-face" src="images/pearl.png" id="Pair-6">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-6_back">
+                    <img class="front-face" src="" id="Pair-6">
+                    <img class="back-face" src="" id="pair-6_back">
                 </div>
                 <div class="tile" id="a13">
-                    <img class="front-face" src="images/squidward.png" id="Pair-7">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-7_back">
+                    <img class="front-face" src="" id="Pair-7">
+                    <img class="back-face" src="" id="pair-7_back">
                 </div>
                 <div class="tile" id="a14">
-                    <img class="front-face" src="images/squidward.png" id="Pair-7">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-7_back">
+                    <img class="front-face" src="" id="Pair-7">
+                    <img class="back-face" src="" id="pair-7_back">
                 </div>
                 <div class="tile" id="a15">
-                    <img class="front-face" src="images/sandy.png" id="Pair-8">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-8_back">
+                    <img class="front-face" src="" id="Pair-8">
+                    <img class="back-face" src="" id="pair-8_back">
                 </div>
                 <div class="tile" id="a16">
-                    <img class="front-face" src="images/sandy.png" id="Pair-8">
-                    <img class="back-face" src="images/spongebob_backface.png" id="pair-8_back">
+                    <img class="front-face" src="" id="Pair-8">
+                    <img class="back-face" src="" id="pair-8_back">
                 </div>
             </section>
 
             <button id="reset_btn" onclick="reset_btn()" style="display: none;">Reset</button>
 
-            <!--       
 
-          <div class="mr"><footer   style="color: rgba(5, 255, 17, 0.997);"><b> Raz Sela 2023</b>&copy;</footer></div> -->
+          <div class="mr"><footer   style="color: rgb(255, 10, 247);"><b> Raz Sela 2023</b>&copy;</footer></div>
 
 
 
