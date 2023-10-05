@@ -133,15 +133,45 @@ menuButton.addEventListener('click', () => {
 });
 
 function show_shoes() {
-    var board = document.getElementById('pattern1')
-    var reset_btn1 = document.getElementById('reset_btn')
+    var board = document.getElementById('pattern1');
+    var reset_btn1 = document.getElementById('reset_btn');
+    var counter = document.getElementById('counter');
+    var shoes_btn = document.getElementById('shoes_btn');
     var play_btn = document.getElementById('spongebob_btn')
-    var counter = document.getElementById('counter')
-    var shoes_btn = document.getElementById('shoes_btn')
     shoes_btn.style.display = 'none';
-    board.style.display = 'grid'
-    reset_btn1.style.display = ''
-    play_btn.style.display = 'none'
-    counter.style.display = ''
+    play_btn.style.display = 'none';
+    board.style.display = 'grid';
+    reset_btn1.style.display = '';
+    counter.style.display = '';
 
+    // Update image sources for shoes
+    const shoe_images = [
+        'images/shoes_pair_1.png',
+        'images/shoes_pair_2.png',
+        'images/shoes_pair_3.png',
+        'images/shoes_pair_4.png',
+        'images/shoes_pair_5.png',
+        'images/shoes_pair_6.png',
+        'images/shoes_pair_7.png',
+        'images/shoes_pair_8.png',
+        'images/shoes_pair_1.png',
+        'images/shoes_pair_2.png',
+        'images/shoes_pair_3.png',
+        'images/shoes_pair_4.png',
+        'images/shoes_pair_5.png',
+        'images/shoes_pair_6.png',
+        'images/shoes_pair_7.png',
+        'images/shoes_pair_8.png',
+    ];
+
+    const tiles = document.querySelectorAll('.tile');
+
+    for (let i = 0; i < tiles.length; i++) {
+        const frontFaceImg = tiles[i].querySelector('.front-face');
+        const backFaceImg = tiles[i].querySelector('.back-face');
+        frontFaceImg.src = shoe_images[i];
+
+        // you can change it to a shoe image if you want, instead of bob spong
+        backFaceImg.src = 'images/shoes_background.png'; 
+    }
 }
