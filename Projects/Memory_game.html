@@ -26,7 +26,7 @@
             <section id="select_subject">
                 <h1><B>Select subject:</b></h1>
             </section>
-            <section id="select_level" >
+            <section id="select_level" style="display: none;" >
                 <h1><B>Select level:</b></h1>
             </section>
             <button id="menu" class="menu-button"><b>Menu</b></button>
@@ -38,72 +38,75 @@
             <button id="spongebob_btn" onclick="spongebob_level()"><B>Spongebob</B></button>
             <button id="spongebob_btn_hard" onclick="show_spongebob6()" style="display: none;"><B>6x6</B></button><br>
             <button id="spongebob_btn_easy" onclick="show_spongebob4()" style="display: none;"><B>4x4</B></button>
-            <button id="shoes_btn" onclick="show_shoes()"><B>Shoes</B></button>
+            <button id="shoes_btn" onclick="shoes_level()"><B>Shoes</B></button>
+            <button id="shoes_btn_hard" onclick="show_shoes6()" style="display: none;"><B>6x6</B></button><br>
+            <button id="shoes_btn_easy" onclick="show_shoes4()" style="display: none;"><B>4x4</B></button>
             <button id="cars_btn" onclick="show_cars()"><B>Cars logo</B></button>
-
+            <button id="cars_btn_hard" onclick="show_cars6()" style="display: none;"><B>6x6</B></button><br>
+            <button id="cars_btn_easy" onclick="show_cars4()" style="display: none;"><B>4x4</B></button>
 <!-- 4x4 -->
             <section class="container" id="pattern4" style="display: none;">
-                <div class="tile" id="b1">
+                <div class="tile1" id="b1">
                     <img class="front-face" src="" id="Pair-1">
                     <img class="back-face" src="" id="pair-1_back">
                 </div>
-                <div class="tile" id="b2">
+                <div class="tile1" id="b2">
                     <img class="front-face" src="" id="Pair-1">
                     <img class="back-face" src="" id="pair-1_back">
                 </div>
-                <div class="tile" id="b3">
+                <div class="tile1" id="b3">
                     <img class="front-face" src="" id="Pair-2">
                     <img class="back-face" src="" id="pair-2_back">
                 </div>
-                <div class="tile" id="b4">
+                <div class="tile1" id="b4">
                     <img class="front-face" src="" id="Pair-2">
                     <img class="back-face" src="" id="pair-2_back">
                 </div>
-                <div class="tile" id="b5">
+                <div class="tile1" id="b5">
                     <img class="front-face" src="" id="Pair-3">
                     <img class="back-face" src="" id="pair-3_back">
                 </div>
-                <div class="tile" id="b6">
+                <div class="tile1" id="b6">
                     <img class="front-face" src="" id="Pair-3">
                     <img class="back-face" src="" id="pair-3_back">
                 </div>
-                <div class="tile" id="b7">
+                <div class="tile1" id="b7">
                     <img class="front-face" src="" id="Pair-4">
                     <img class="back-face" src="" id="pair-4_back">
                 </div>
-                <div class="tile" id="b8">
+                <div class="tile1" id="b8">
                     <img class="front-face" src="" id="Pair-4">
                     <img class="back-face" src="" id="pair-4_back">
                 </div>
-                <div class="tile" id="b9">
+                <div class="tile1" id="b9">
                     <img class="front-face" src="" id="Pair-5">
                     <img class="back-face" src="" id="pair-5_back">
                 </div>
-                <div class="tile" id="b10">
+                <div class="tile1" id="b10">
                     <img class="front-face" src="" id="Pair-5">
                     <img class="back-face" src="" id="pair-5_back">
                 </div>
-                <div class="tile" id="b11">
+                <div class="tile1" id="b11">
                     <img class="front-face" src="" id="Pair-6">
                     <img class="back-face" src="" id="pair-6_back">
                 </div>
-                <div class="tile" id="b12">
+                <div class="tile1" id="b12">
                     <img class="front-face" src="" id="Pair-6">
                     <img class="back-face" src="" id="pair-6_back">
                 </div>
-                <div class="tile" id="b13">
+                <div class="tile1" id="b13">
                     <img class="front-face" src="" id="Pair-7">
                     <img class="back-face" src="" id="pair-7_back">
                 </div>
-                <div class="tile" id="b14">
+                <div class="tile1" id="b14">
                     <img class="front-face" src="" id="Pair-7">
                     <img class="back-face" src="" id="pair-7_back">
                 </div>
-                <div class="tile" id="b15">
+                <div class="tile1" id="b15">
                     <img class="front-face" src="" id="Pair-8">
                     <img class="back-face" src="" id="pair-8_back">
                 </div>
-                <div class="tile" id="b16">
+                <div class="tile1" id="b16">
                     <img class="front-face" src="" id="Pair-8">
                     <img class="back-face" src="" id="pair-8_back">
                 </div>
@@ -111,147 +114,147 @@
 
             <!-- 6x6 -->
             <section class="container" id="pattern6" style="display: none;">
-                <div class="tile" id="a1">
+                <div class="tile2" id="a1">
                     <img class="front-face" src="" id="Pair-1">
                     <img class="back-face" src="" id="pair-1_back">
                 </div>
-                <div class="tile" id="a2">
+                <div class="tile2" id="a2">
                     <img class="front-face" src="" id="Pair-1">
                     <img class="back-face" src="" id="pair-1_back">
                 </div>
-                <div class="tile" id="a3">
+                <div class="tile2" id="a3">
                     <img class="front-face" src="" id="Pair-2">
                     <img class="back-face" src="" id="pair-2_back">
                 </div>
-                <div class="tile" id="a4">
+                <div class="tile2" id="a4">
                     <img class="front-face" src="" id="Pair-2">
                     <img class="back-face" src="" id="pair-2_back">
                 </div>
-                <div class="tile" id="a5">
+                <div class="tile2" id="a5">
                     <img class="front-face" src="" id="Pair-3">
                     <img class="back-face" src="" id="pair-3_back">
                 </div>
-                <div class="tile" id="a6">
+                <div class="tile2" id="a6">
                     <img class="front-face" src="" id="Pair-3">
                     <img class="back-face" src="" id="pair-3_back">
                 </div>
-                <div class="tile" id="a7">
+                <div class="tile2" id="a7">
                     <img class="front-face" src="" id="Pair-4">
                     <img class="back-face" src="" id="pair-4_back">
                 </div>
-                <div class="tile" id="a8">
+                <div class="tile2" id="a8">
                     <img class="front-face" src="" id="Pair-4">
                     <img class="back-face" src="" id="pair-4_back">
                 </div>
-                <div class="tile" id="a9">
+                <div class="tile2" id="a9">
                     <img class="front-face" src="" id="Pair-5">
                     <img class="back-face" src="" id="pair-5_back">
                 </div>
-                <div class="tile" id="a10">
+                <div class="tile2" id="a10">
                     <img class="front-face" src="" id="Pair-5">
                     <img class="back-face" src="" id="pair-5_back">
                 </div>
-                <div class="tile" id="a11">
+                <div class="tile2" id="a11">
                     <img class="front-face" src="" id="Pair-6">
                     <img class="back-face" src="" id="pair-6_back">
                 </div>
-                <div class="tile" id="a12">
+                <div class="tile2" id="a12">
                     <img class="front-face" src="" id="Pair-6">
                     <img class="back-face" src="" id="pair-6_back">
                 </div>
-                <div class="tile" id="a13">
+                <div class="tile2" id="a13">
                     <img class="front-face" src="" id="Pair-7">
                     <img class="back-face" src="" id="pair-7_back">
                 </div>
-                <div class="tile" id="a14">
+                <div class="tile2" id="a14">
                     <img class="front-face" src="" id="Pair-7">
                     <img class="back-face" src="" id="pair-7_back">
                 </div>
-                <div class="tile" id="a15">
+                <div class="tile2" id="a15">
                     <img class="front-face" src="" id="Pair-8">
                     <img class="back-face" src="" id="pair-8_back">
                 </div>
-                <div class="tile" id="a16">
+                <div class="tile2" id="a16">
                     <img class="front-face" src="" id="Pair-8">
                     <img class="back-face" src="" id="pair-8_back">
                 </div>
-                <div class="tile" id="a17">
+                <div class="tile2" id="a17">
                     <img class="front-face" src="" id="Pair-9">
                     <img class="back-face" src="" id="pair-9_back">
                 </div>
-                <div class="tile" id="a18">
+                <div class="tile2" id="a18">
                     <img class="front-face" src="" id="Pair-9">
                     <img class="back-face" src="" id="pair-9_back">
                 </div>
-                <div class="tile" id="a19">
+                <div class="tile2" id="a19">
                     <img class="front-face" src="" id="Pair-10">
                     <img class="back-face" src="" id="pair-10_back">
                 </div>
-                <div class="tile" id="a20">
+                <div class="tile2" id="a20">
                     <img class="front-face" src="" id="Pair-10">
                     <img class="back-face" src="" id="pair-10_back">
                 </div>
-                <div class="tile" id="a21">
+                <div class="tile2" id="a21">
                     <img class="front-face" src="" id="Pair-11">
                     <img class="back-face" src="" id="pair-11_back">
                 </div>
-                <div class="tile" id="a22">
+                <div class="tile2" id="a22">
                     <img class="front-face" src="" id="Pair-11">
                     <img class="back-face" src="" id="pair-11_back">
                 </div>
-                <div class="tile" id="a23">
+                <div class="tile2" id="a23">
                     <img class="front-face" src="" id="Pair-12">
                     <img class="back-face" src="" id="pair-12_back">
                 </div>
-                <div class="tile" id="a24">
+                <div class="tile2" id="a24">
                     <img class="front-face" src="" id="Pair-12">
                     <img class="back-face" src="" id="pair-12_back">
                 </div>
-                <div class="tile" id="a25">
+                <div class="tile2" id="a25">
                     <img class="front-face" src="" id="Pair-13">
                     <img class="back-face" src="" id="pair-13_back">
                 </div>
-                <div class="tile" id="a26">
+                <div class="tile2" id="a26">
                     <img class="front-face" src="" id="Pair-13">
                     <img class="back-face" src="" id="pair-13_back">
                 </div>
-                <div class="tile" id="a27">
+                <div class="tile2" id="a27">
                     <img class="front-face" src="" id="Pair-14">
                     <img class="back-face" src="" id="pair-14_back">
                 </div>
-                <div class="tile" id="a28">
+                <div class="tile2" id="a28">
                     <img class="front-face" src="" id="Pair-14">
                     <img class="back-face" src="" id="pair-14_back">
                 </div>
-                <div class="tile" id="a29">
+                <div class="tile2" id="a29">
                     <img class="front-face" src="" id="Pair-15">
                     <img class="back-face" src="" id="pair-15_back">
                 </div>
-                <div class="tile" id="a30">
+                <div class="tile2" id="a30">
                     <img class="front-face" src="" id="Pair-15">
                     <img class="back-face" src="" id="pair-15_back">
                 </div>
-                <div class="tile" id="a31">
+                <div class="tile2" id="a31">
                     <img class="front-face" src="" id="Pair-16">
                     <img class="back-face" src="" id="pair-16_back">
                 </div>
-                <div class="tile" id="a32">
+                <div class="tile2" id="a32">
                     <img class="front-face" src="" id="Pair-16">
                     <img class="back-face" src="" id="pair-16_back">
                 </div>
-                <div class="tile" id="a33">
+                <div class="tile2" id="a33">
                     <img class="front-face" src="" id="Pair-17">
                     <img class="back-face" src="" id="pair-17_back">
                 </div>
-                <div class="tile" id="a34">
+                <div class="tile2" id="a34">
                     <img class="front-face" src="" id="Pair-17">
                     <img class="back-face" src="" id="pair-17_back">
                 </div>
-                <div class="tile" id="a35">
+                <div class="tile2" id="a35">
                     <img class="front-face" src="" id="Pair-18">
                     <img class="back-face" src="" id="pair-18_back">
                 </div>
-                <div class="tile" id="a36">
+                <div class="tile2" id="a36">
                     <img class="front-face" src="" id="Pair-18">
                     <img class="back-face" src="" id="pair-18_back">
                 </div>

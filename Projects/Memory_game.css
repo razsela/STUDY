@@ -39,13 +39,12 @@ body {
   margin-left: 40%;
 }
 #select_level{
-  display: none;
     color: rgb(255, 10, 247);
     text-align: center;
     font-size: 28px;
     margin-top: 3%;
     max-width: fit-content;
-    margin-left: 40%;
+    margin-left: 42%;
   }
 
 #menu  {
@@ -77,7 +76,7 @@ body {
 #spongebob_btn_hard, #spongebob_btn_easy{
   color: rgb(239, 255, 10);
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   max-width: fit-content;
   margin-top: 3%;
   margin-left: 48%;
@@ -89,12 +88,25 @@ body {
 }
 
 #shoes_btn {
-  color: rgb(0, 255, 38);
+  color: rgb(14, 209, 44);
   text-align: center;
   font-size: 30px;
   max-width: fit-content;
   margin-top: 3%;
   margin-left: 47%;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+#shoes_btn_hard , #shoes_btn_easy{
+  color: rgb(14, 209, 44);
+  text-align: center;
+  font-size: 35px;
+  max-width: fit-content;
+  margin-top: 3%;
+  margin-left: 48%;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
   cursor: pointer;
@@ -108,6 +120,19 @@ body {
   max-width: fit-content;
   margin-top: 3%;
   margin-left: 45.8%;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+#cars_btn_hard , #cars_btn_easy{
+  color: rgb(10, 255, 255);
+  text-align: center;
+  font-size: 35px;
+  max-width: fit-content;
+  margin-top: 3%;
+  margin-left: 48%;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
   cursor: pointer;
@@ -134,8 +159,8 @@ body {
     grid-template-rows: repeat(4, 100px);
     grid-gap: 5px;
     max-width: 300px;
-    margin-left: 32%;
-    margin-top: 1%;
+    margin-left: 38%;
+    margin-top: -1%;
     perspective: 1000px;
 }
 #pattern6 {
@@ -144,13 +169,13 @@ body {
   grid-template-rows: repeat(6, 80px);
   grid-gap: 5px;
   max-width: 300px;
-  margin-left: 32%;
-  margin-top: 1%;
+  margin-top: -40px;
+  margin-left: 35%;
   perspective: 1000px;
 }
 
 
-.tile {
+.tile1 , .tile2 {
   width: repeat(4, 100px);
   height: repeat(4 , 100px);
   margin: 5px;
@@ -173,11 +198,14 @@ body {
   
 }
 
-.tile:active {
+.tile1:active , .tile2:active{
   transform: scale(0.97);
   transition: transform .2s;
 }
-.tile.flip {
+.tile1.flip  {
+  transform: rotateY(180deg);
+}
+.tile2.flip {
   transform: rotateY(180deg);
 }
 .front-face {
@@ -193,6 +221,7 @@ body {
   border: none;
   font-size: 20px;
   margin-left: 49%;
+  margin-top: 3px;
   cursor: pointer;
   transition: transform .5s;
   transform: scale(1);
