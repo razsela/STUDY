@@ -38,6 +38,16 @@ body {
   max-width: fit-content;
   margin-left: 40%;
 }
+#select_level{
+  display: none;
+    color: rgb(255, 10, 247);
+    text-align: center;
+    font-size: 28px;
+    margin-top: 3%;
+    max-width: fit-content;
+    margin-left: 40%;
+  }
+
 #menu  {
     position: absolute;
     top: 10px;
@@ -58,6 +68,19 @@ body {
   max-width: fit-content;
   margin-top: 3%;
   margin-left: 45%;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+#spongebob_btn_hard, #spongebob_btn_easy{
+  color: rgb(239, 255, 10);
+  text-align: center;
+  font-size: 30px;
+  max-width: fit-content;
+  margin-top: 3%;
+  margin-left: 48%;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
   cursor: pointer;
@@ -92,7 +115,7 @@ body {
   transition: 0.5s;
 }
 
-#shoes_btn:hover, #spongebob_btn:hover, #cars_btn:hover , #menu:hover {
+#shoes_btn:hover, #spongebob_btn:hover, #cars_btn:hover , #menu:hover, #spongebob_btn_easy:hover , #spongebob_btn_hard:hover {
 
   box-shadow: 0 10px 50px #afe0f5;
 }
@@ -105,16 +128,27 @@ body {
   margin-left: 45%;
   
 }
-.container {
+#pattern4 {
     display: grid;
-    grid-template-columns: repeat(4, 120px);
-    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
     grid-gap: 5px;
     max-width: 300px;
-    margin-left: 35%;
+    margin-left: 32%;
     margin-top: 1%;
     perspective: 1000px;
 }
+#pattern6 {
+  display: grid;
+  grid-template-columns: repeat(6, 80px);
+  grid-template-rows: repeat(6, 80px);
+  grid-gap: 5px;
+  max-width: 300px;
+  margin-left: 32%;
+  margin-top: 1%;
+  perspective: 1000px;
+}
+
 
 .tile {
   width: repeat(4, 100px);

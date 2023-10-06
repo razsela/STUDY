@@ -112,23 +112,45 @@ menuButton.addEventListener('click', () => {
     document.getElementById('shoes_btn').style.display = '';
     document.getElementById('cars_btn').style.display = '';
     document.getElementById('select_subject').style.display = '';
-    document.getElementById("background").style.backgroundImage = "url(images/memory_game_background.png)";  
-    
+    document.getElementById("background").style.backgroundImage = "url(images/memory_game_background.png)";
+
 
     clicks = 0;
     updateScores();
     reset_btn();
 });
 //
+function spongebob_level() {
+    var reset_btn1 = document.getElementById('reset_btn');
+    var counter = document.getElementById('counter');
+    var shoes_btn = document.getElementById('shoes_btn');
+    var spongebob_btn = document.getElementById('spongebob_btn');
+    var cars_btn = document.getElementById('cars_btn');
+    var subject = document.getElementById('select_subject');
+    var spongebob_hard = document.getElementById('spongebob_btn_hard');
+    var spongebob_easy = document.getElementById('spongebob_btn_easy');
+    var select_level = document.getElementById('select_level');
+    select_level.style.display = '';
+    spongebob_easy.style.display = '';
+    spongebob_hard.style.display = '';
+    subject.style.display = 'none';
+    cars_btn.style.display = 'none';
+    shoes_btn.style.display = 'none';
+    spongebob_btn.style.display = 'none';
 
-function show_spongebob() {
-    var board = document.getElementById('pattern1');
+}
+function show_spongebob4() {
+    var board = document.getElementById('pattern4');
     var reset_btn1 = document.getElementById('reset_btn');
     var counter = document.getElementById('counter');
     var shoes_btn = document.getElementById('shoes_btn');
     var play_btn = document.getElementById('spongebob_btn');
     var cars_btn = document.getElementById('cars_btn');
     var subject = document.getElementById('select_subject');
+    var spongebob_hard = document.getElementById('spongebob_btn_hard');
+    var spongebob_easy = document.getElementById('spongebob_btn_easy');
+    spongebob_easy.style.display = 'none';
+    spongebob_hard.style.display = 'none';
     subject.style.display = 'none';
     cars_btn.style.display = 'none';
     shoes_btn.style.display = 'none';
@@ -136,7 +158,7 @@ function show_spongebob() {
     board.style.display = 'grid';
     reset_btn1.style.display = '';
     counter.style.display = '';
-
+ 
     document.getElementById("background").style.backgroundImage = "url(images/spongebob_background.png)";    // Update image sources for shoes
     const spongebob_images = [
         'images/spongebob_character.png',
@@ -154,17 +176,89 @@ function show_spongebob() {
         'images/patrick.png',
         'images/mr_crabs.png',
         'images/mrs_puff.png',
-        'images/plankton.png'
+        'images/plankton.png',
+    
     ];
 
+    const tiles = document.querySelectorAll('.tile');
+
+    for (let i = 0; i < 16; i++) {
+        const frontFaceImg = tiles[i].querySelector('.front-face');
+        const backFaceImg = tiles[i].querySelector('.back-face');
+        frontFaceImg.src = spongebob_images[i];
+        backFaceImg.src = 'images/spongebob_backface.png';
+
+
+    }
+}
+function show_spongebob6() {
+    var board = document.getElementById('pattern6');
+    var reset_btn1 = document.getElementById('reset_btn');
+    var counter = document.getElementById('counter');
+    var shoes_btn = document.getElementById('shoes_btn');
+    var play_btn = document.getElementById('spongebob_btn');
+    var cars_btn = document.getElementById('cars_btn');
+    var subject = document.getElementById('select_subject');
+    var spongebob_hard = document.getElementById('spongebob_btn_hard');
+    var spongebob_easy = document.getElementById('spongebob_btn_easy');
+    spongebob_easy.style.display = 'none';
+    spongebob_hard.style.display = 'none';
+    subject.style.display = 'none';
+    cars_btn.style.display = 'none';
+    shoes_btn.style.display = 'none';
+    play_btn.style.display = 'none';
+    board.style.display = 'grid';
+    reset_btn1.style.display = '';
+    counter.style.display = '';
+
+    document.getElementById("background").style.backgroundImage = "url(images/spongebob_background.png)";    // Update image sources for shoes
+    const spongebob_images6 = [
+        'images/spongebob_character.png',
+        'images/squidward.png',
+        'images/sandy.png',
+        'images/pearl.png',
+        'images/patrick.png',
+        'images/mr_crabs.png',
+        'images/mrs_puff.png',
+        'images/plankton.png',
+        'images/larry.png',
+        'images/karen.png',
+        'images/squilliam.png',
+        'images/neptune.png',
+        'images/spongebob_character_2.png',
+        'images/patrick_2.png',
+        'images/squidward_2.png',
+        'images/magic_boy.png',
+        'images/sea_man.png',
+        'images/ray.png',
+        
+        'images/spongebob_character.png',
+        'images/squidward.png',
+        'images/sandy.png',
+        'images/pearl.png',
+        'images/patrick.png',
+        'images/mr_crabs.png',
+        'images/mrs_puff.png',
+        'images/plankton.png',
+        'images/larry.png',
+        'images/karen.png',
+        'images/neptune.png',
+        'images/spongebob_character_2.png',
+        'images/patrick_2.png',
+        'images/squidward_2.png',
+        'images/magic_boy.png',
+        'images/sea_man.png',
+        'images/squilliam.png',
+        'images/ray.png'
+    ];
     const tiles = document.querySelectorAll('.tile');
 
     for (let i = 0; i < tiles.length; i++) {
         const frontFaceImg = tiles[i].querySelector('.front-face');
         const backFaceImg = tiles[i].querySelector('.back-face');
-        frontFaceImg.src = spongebob_images[i];
-        backFaceImg.src = 'images/spongebob_backface.png'; 
-        
+        frontFaceImg.src = spongebob_images6[i];
+        backFaceImg.src = 'images/spongebob_backface.png';
+
 
     }
 }
@@ -215,7 +309,7 @@ function show_shoes() {
         frontFaceImg.src = shoe_images[i];
 
         // you can change it to a shoe image if you want, instead of bob spong
-        backFaceImg.src = 'images/shoes_backface.png'; 
+        backFaceImg.src = 'images/shoes_backface.png';
     }
 }
 
@@ -264,7 +358,7 @@ function show_cars() {
         frontFaceImg.src = cars_images[i];
 
         // you can change it to a shoe image if you want, instead of bob spong
-        backFaceImg.src = 'images/cars_backface.png'; 
+        backFaceImg.src = 'images/cars_backface.png';
     }
 }
 
