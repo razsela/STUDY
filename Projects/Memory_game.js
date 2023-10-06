@@ -125,6 +125,8 @@ menuButton.addEventListener('click', () => {
     document.getElementById('shoes_btn_hard').style.display = 'none';
     document.getElementById('shoes_btn_easy').style.display = 'none';
     document.getElementById('cars_btn').style.display = '';
+    document.getElementById('cars_btn_hard').style.display = 'none';
+   document.getElementById('cars_btn_easy').style.display = 'none';
     document.getElementById('select_subject').style.display = '';
     document.getElementById('select_level').style.display = 'none';
     document.getElementById("background").style.backgroundImage = "url(images/memory_game_background.png)";
@@ -376,7 +378,7 @@ function show_shoes6() {
     board.style.display = 'grid';
     reset_btn1.style.display = '';
     counter.style.display = '';
-    document.getElementById("background").style.backgroundImage = "url(images/shoes_background.png)";    // Update image sources for shoes
+    document.getElementById("background").style.backgroundImage = "url(images/shoes_background2.png)";    // Update image sources for shoes
 
     // Update image sources for shoes
     const shoe_images = [
@@ -388,6 +390,17 @@ function show_shoes6() {
         'images/shoes_pair_6.png',
         'images/shoes_pair_7.png',
         'images/shoes_pair_8.png',
+        'images/shoes_pair_9.png',
+        'images/shoes_pair_10.png',
+        'images/shoes_pair_11.png',
+        'images/shoes_pair_12.png',
+        'images/shoes_pair_13.png',
+        'images/shoes_pair_14.png',
+        'images/shoes_pair_15.png',
+        'images/shoes_pair_16.png',
+        'images/shoes_pair_17.png',
+        'images/shoes_pair_18.png',
+
         'images/shoes_pair_1.png',
         'images/shoes_pair_2.png',
         'images/shoes_pair_3.png',
@@ -396,6 +409,16 @@ function show_shoes6() {
         'images/shoes_pair_6.png',
         'images/shoes_pair_7.png',
         'images/shoes_pair_8.png',
+        'images/shoes_pair_9.png',
+        'images/shoes_pair_10.png',
+        'images/shoes_pair_11.png',
+        'images/shoes_pair_12.png',
+        'images/shoes_pair_13.png',
+        'images/shoes_pair_14.png',
+        'images/shoes_pair_15.png',
+        'images/shoes_pair_16.png',
+        'images/shoes_pair_17.png',
+        'images/shoes_pair_18.png',
     ];
 
     const tiles = document.querySelectorAll('.tile2');
@@ -409,6 +432,26 @@ function show_shoes6() {
     }
 }
 
+function cars_level() {
+    var reset_btn1 = document.getElementById('reset_btn');
+    var counter = document.getElementById('counter');
+    var shoes_btn = document.getElementById('shoes_btn');
+    var spongebob_btn = document.getElementById('spongebob_btn');
+    var cars_btn = document.getElementById('cars_btn');
+    var subject = document.getElementById('select_subject');
+    var cars_hard = document.getElementById('cars_btn_hard');
+    var cars_easy = document.getElementById('cars_btn_easy');
+    var select_level = document.getElementById('select_level');
+    select_level.style.display = '';
+    cars_easy.style.display = '';
+    cars_hard.style.display = '';
+    subject.style.display = 'none';
+    cars_btn.style.display = 'none';
+    shoes_btn.style.display = 'none';
+    spongebob_btn.style.display = 'none';
+
+}
+
 function show_cars4() {
     var board = document.getElementById('pattern4');
     var reset_btn1 = document.getElementById('reset_btn');
@@ -416,9 +459,15 @@ function show_cars4() {
     var shoes_btn = document.getElementById('shoes_btn');
     var play_btn = document.getElementById('spongebob_btn')
     var cars_btn = document.getElementById('cars_btn');
+    var cars_hard = document.getElementById('cars_btn_hard');
+    var cars_easy = document.getElementById('cars_btn_easy');
     var subject = document.getElementById('select_subject');
+    var select_level = document.getElementById('select_level');
+    select_level.style.display = 'none';
     subject.style.display = 'none';
     cars_btn.style.display = 'none';
+    cars_easy.style.display = 'none';
+    cars_hard.style.display = 'none';
     shoes_btn.style.display = 'none';
     play_btn.style.display = 'none';
     board.style.display = 'grid';
@@ -432,7 +481,7 @@ function show_cars4() {
         'images/bmw.png',
         'images/hyundai.png',
         'images/honda.png',
-        'images/porsche.png',
+        'images/volvo.png',
         'images/toyota.png',
         'images/kia.png',
         'images/wolswagen.png',
@@ -440,13 +489,88 @@ function show_cars4() {
         'images/bmw.png',
         'images/hyundai.png',
         'images/honda.png',
-        'images/porsche.png',
+        'images/volvo.png',
         'images/toyota.png',
         'images/kia.png',
         'images/wolswagen.png'
     ];
 
     const tiles = document.querySelectorAll('.tile1');
+
+    for (let i = 0; i < tiles.length; i++) {
+        const frontFaceImg = tiles[i].querySelector('.front-face');
+        const backFaceImg = tiles[i].querySelector('.back-face');
+        frontFaceImg.src = cars_images[i];
+
+        // you can change it to a shoe image if you want, instead of bob spong
+        backFaceImg.src = 'images/cars_backface.png';
+    }
+}
+function show_cars6() {
+    var board = document.getElementById('pattern6');
+    var reset_btn1 = document.getElementById('reset_btn');
+    var counter = document.getElementById('counter');
+    var shoes_btn = document.getElementById('shoes_btn');
+    var play_btn = document.getElementById('spongebob_btn')
+    var cars_btn = document.getElementById('cars_btn');
+    var cars_hard = document.getElementById('cars_btn_hard');
+    var cars_easy = document.getElementById('cars_btn_easy');
+    var subject = document.getElementById('select_subject');
+    var select_level = document.getElementById('select_level');
+    select_level.style.display = 'none';
+    subject.style.display = 'none';
+    cars_btn.style.display = 'none';
+    cars_easy.style.display = 'none';
+    cars_hard.style.display = 'none';
+    shoes_btn.style.display = 'none';
+    play_btn.style.display = 'none';
+    board.style.display = 'grid';
+    reset_btn1.style.display = '';
+    counter.style.display = '';
+    document.getElementById("background").style.backgroundImage = "url(images/cars_background.png)";    // Update image sources for shoes
+
+    // Update image sources for shoes
+    const cars_images = [
+        'images/mercedes.png',
+        'images/bmw.png',
+        'images/hyundai.png',
+        'images/honda.png',
+        'images/volvo.png',
+        'images/toyota.png',
+        'images/kia.png',
+        'images/wolswagen.png',
+        'images/ferrari.png',
+        'images/infiniti.png',
+        'images/lexus.png',
+        'images/ford.png',
+        'images/chevrolet.png',
+        'images/alfa_romeo.png',
+        'images/mitsubishi.png',
+        'images/jaguar.png',
+        'images/skoda.png',
+        'images/peugeot.png',
+
+        'images/mercedes.png',
+        'images/bmw.png',
+        'images/hyundai.png',
+        'images/honda.png',
+        'images/volvo.png',
+        'images/toyota.png',
+        'images/kia.png',
+        'images/wolswagen.png',
+        'images/ferrari.png',
+        'images/infiniti.png',
+        'images/lexus.png',
+        'images/ford.png',
+        'images/chevrolet.png',
+        'images/alfa_romeo.png',
+        'images/mitsubishi.png',
+        'images/jaguar.png',
+        'images/skoda.png',
+        'images/peugeot.png'
+    ];
+
+    const tiles = document.querySelectorAll('.tile2');
 
     for (let i = 0; i < tiles.length; i++) {
         const frontFaceImg = tiles[i].querySelector('.front-face');

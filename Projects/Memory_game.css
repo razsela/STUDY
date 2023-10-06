@@ -37,6 +37,8 @@ body {
   margin-top: 3%;
   max-width: fit-content;
   margin-left: 40%;
+  border-radius: 50px;
+
 }
 #select_level{
     color: rgb(255, 10, 247);
@@ -44,7 +46,9 @@ body {
     font-size: 28px;
     margin-top: 3%;
     max-width: fit-content;
-    margin-left: 42%;
+    margin-left: 39.5%;
+    border-radius: 50px;
+
   }
 
 #menu  {
@@ -126,7 +130,7 @@ body {
   border-radius: 50px;
   transition: 0.5s;
 }
-#cars_btn_hard , #cars_btn_easy{
+#cars_btn_hard , #cars_btn_easy {
   color: rgb(10, 255, 255);
   text-align: center;
   font-size: 35px;
@@ -140,7 +144,7 @@ body {
   transition: 0.5s;
 }
 
-#shoes_btn:hover, #spongebob_btn:hover, #cars_btn:hover , #menu:hover, #spongebob_btn_easy:hover , #spongebob_btn_hard:hover {
+#shoes_btn:hover, #spongebob_btn:hover, #cars_btn:hover , #menu:hover, #spongebob_btn_easy:hover , #spongebob_btn_hard:hover , #select_subject ,#select_level{
 
   box-shadow: 0 10px 50px #afe0f5;
 }
@@ -169,7 +173,7 @@ body {
   grid-template-rows: repeat(6, 80px);
   grid-gap: 5px;
   max-width: 300px;
-  margin-top: -40px;
+  margin-top: -45px;
   margin-left: 35%;
   perspective: 1000px;
 }
@@ -193,7 +197,7 @@ body {
   height: 100%;
   position: absolute;
   border-radius: 5px;
-  background: pink;
+  background: rgb(255, 255, 255);
   backface-visibility: hidden;
   
 }
