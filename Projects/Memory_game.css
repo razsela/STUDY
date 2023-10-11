@@ -22,14 +22,14 @@ body {
   position: fixed;
 }
 
-#title {
+ #title {
   color: rgb(255, 10, 247);
   text-align: center;
   font-size: 32px;
   margin-top: 3%;
   max-width: fit-content;
   margin-left: 35%;
-}
+} 
 #select_subject {
   color: rgb(255, 10, 247);
   text-align: center;
@@ -143,12 +143,29 @@ body {
   border-radius: 50px;
   transition: 0.5s;
 }
+#random_btn {
+  color: rgb(255, 0, 0);
+  text-align: center;
+  font-size: 30px;
+  max-width: fit-content;
+  margin-top: 3%;
+  margin-left: 46.5%;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s;
+}
 
-#shoes_btn:hover, #spongebob_btn:hover, #cars_btn:hover , #menu:hover, #spongebob_btn_easy:hover , #spongebob_btn_hard:hover , #select_subject ,#select_level{
+#shoes_btn:hover,#shoes_btn_hard:hover,#shoes_btn_easy:hover, #spongebob_btn:hover, #cars_btn:hover,#cars_btn_easy:hover ,#cars_btn_hard:hover , #menu:hover, #spongebob_btn_easy:hover , #spongebob_btn_hard:hover , #random_btn:hover   {
 
   box-shadow: 0 10px 50px #afe0f5;
 }
+#tile1:hover , #tile2 :hover{
 
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
 #counter {
   color: rgb(255, 10, 247);
   text-align: center;

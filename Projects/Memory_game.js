@@ -127,6 +127,7 @@ menuButton.addEventListener('click', () => {
     document.getElementById('cars_btn').style.display = '';
     document.getElementById('cars_btn_hard').style.display = 'none';
    document.getElementById('cars_btn_easy').style.display = 'none';
+   document.getElementById('random_btn').style.display = '';
     document.getElementById('select_subject').style.display = '';
     document.getElementById('select_level').style.display = 'none';
     document.getElementById("background").style.backgroundImage = "url(images/memory_game_background.png)";
@@ -147,6 +148,7 @@ function spongebob_level() {
     var spongebob_hard = document.getElementById('spongebob_btn_hard');
     var spongebob_easy = document.getElementById('spongebob_btn_easy');
     var select_level = document.getElementById('select_level');
+    document.getElementById('random_btn').style.display = 'none';
     select_level.style.display = '';
     spongebob_easy.style.display = '';
     spongebob_hard.style.display = '';
@@ -167,6 +169,8 @@ function show_spongebob4() {
     var spongebob_hard = document.getElementById('spongebob_btn_hard');
     var spongebob_easy = document.getElementById('spongebob_btn_easy');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = 'none';
     spongebob_easy.style.display = 'none';
     spongebob_hard.style.display = 'none';
@@ -221,6 +225,8 @@ function show_spongebob6() {
     var spongebob_hard = document.getElementById('spongebob_btn_hard');
     var spongebob_easy = document.getElementById('spongebob_btn_easy');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = 'none';
     spongebob_easy.style.display = 'none';
     spongebob_hard.style.display = 'none';
@@ -294,6 +300,8 @@ function shoes_level() {
     var shoes_hard = document.getElementById('shoes_btn_hard');
     var shoes_easy = document.getElementById('shoes_btn_easy');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = '';
     shoes_easy.style.display = '';
     shoes_hard.style.display = '';
@@ -314,6 +322,8 @@ function show_shoes4() {
     var shoes_hard = document.getElementById('shoes_btn_hard');
     var shoes_easy = document.getElementById('shoes_btn_easy');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = 'none';
     shoes_easy.style.display = 'none';
     shoes_hard.style.display = 'none';
@@ -324,7 +334,7 @@ function show_shoes4() {
     board.style.display = 'grid';
     reset_btn1.style.display = '';
     counter.style.display = '';
-    document.getElementById("background").style.backgroundImage = "url(images/shoes_background.png)";    // Update image sources for shoes
+    document.getElementById("background").style.backgroundImage = "url(images/shoes_background2.png)";     // Update image sources for shoes
 
     // Update image sources for shoes
     const shoe_images = [
@@ -368,6 +378,8 @@ function show_shoes6() {
     var shoes_hard = document.getElementById('shoes_btn_hard');
     var shoes_easy = document.getElementById('shoes_btn_easy');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = 'none';
     shoes_easy.style.display = 'none';
     shoes_hard.style.display = 'none';
@@ -442,6 +454,8 @@ function cars_level() {
     var cars_hard = document.getElementById('cars_btn_hard');
     var cars_easy = document.getElementById('cars_btn_easy');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = '';
     cars_easy.style.display = '';
     cars_hard.style.display = '';
@@ -463,6 +477,8 @@ function show_cars4() {
     var cars_easy = document.getElementById('cars_btn_easy');
     var subject = document.getElementById('select_subject');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = 'none';
     subject.style.display = 'none';
     cars_btn.style.display = 'none';
@@ -517,6 +533,8 @@ function show_cars6() {
     var cars_easy = document.getElementById('cars_btn_easy');
     var subject = document.getElementById('select_subject');
     var select_level = document.getElementById('select_level');
+    var random_btn = document.getElementById('random_btn');
+    random_btn.style.display = 'none'
     select_level.style.display = 'none';
     subject.style.display = 'none';
     cars_btn.style.display = 'none';
@@ -581,4 +599,40 @@ function show_cars6() {
         backFaceImg.src = 'images/cars_backface.png';
     }
 }
+
+// Random option!
+const games = [
+    { game: 'spongebob', gridSize: '4x4' },
+    { game: 'spongebob', gridSize: '6x6' },
+    { game: 'shoes', gridSize: '4x4' },
+    { game: 'shoes', gridSize: '6x6' },
+    { game: 'cars', gridSize: '4x4' },
+    { game: 'cars', gridSize: '6x6' }
+];
+
+document.getElementById('random_btn').addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * games.length);
+    const selectedGame = games[randomIndex];
+
+    if (selectedGame.game === 'spongebob') {
+        if (selectedGame.gridSize === '4x4') {
+            show_spongebob4();
+        } else if (selectedGame.gridSize === '6x6') {
+            show_spongebob6();
+        }
+    } else if (selectedGame.game === 'shoes') {
+        if (selectedGame.gridSize === '4x4') {
+            show_shoes4();
+        } else if (selectedGame.gridSize === '6x6') {
+            show_shoes6();
+        }
+    } else if (selectedGame.game === 'cars') {
+        if (selectedGame.gridSize === '4x4') {
+            show_cars4();
+        } else if (selectedGame.gridSize === '6x6') {
+            show_cars6();
+        }
+    }
+});
+
 
