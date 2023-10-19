@@ -133,6 +133,7 @@ menuButton.addEventListener('click', () => {
     document.getElementById('select_subject').style.display = '';
     document.getElementById('select_level').style.display = 'none';
     document.getElementById("background").style.backgroundImage = "url(images/memory_game_background.png)";
+    document.getElementById('mr').style.display = '';
 
 
     clicks = 0;
@@ -151,6 +152,8 @@ function spongebob_level() {
     var spongebob_easy = document.getElementById('spongebob_btn_easy');
     var select_level = document.getElementById('select_level');
     document.getElementById('random_btn').style.display = 'none';
+    document.getElementById('mr').style.display = 'none';
+
     select_level.style.display = '';
     spongebob_easy.style.display = '';
     spongebob_hard.style.display = '';
@@ -303,6 +306,7 @@ function shoes_level() {
     var shoes_easy = document.getElementById('shoes_btn_easy');
     var select_level = document.getElementById('select_level');
     var random_btn = document.getElementById('random_btn');
+    document.getElementById('mr').style.display = 'none';
     random_btn.style.display = 'none'
     select_level.style.display = '';
     shoes_easy.style.display = '';
@@ -457,6 +461,8 @@ function cars_level() {
     var cars_easy = document.getElementById('cars_btn_easy');
     var select_level = document.getElementById('select_level');
     var random_btn = document.getElementById('random_btn');
+    document.getElementById('mr').style.display = 'none';
+
     random_btn.style.display = 'none'
     select_level.style.display = '';
     cars_easy.style.display = '';

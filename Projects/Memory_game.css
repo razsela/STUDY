@@ -66,7 +66,7 @@ body {
 #tictactoe_btn {
   position: absolute;
   top: 10px;
-  left: 85%;
+  left: 88%;
   color:  rgb(10, 255, 67);
   background-color: rgba(255, 255, 255, 0);
   padding: 8px;
@@ -169,7 +169,7 @@ body {
   transition: 0.5s;
 }
 
-#shoes_btn:hover,#shoes_btn_hard:hover,#shoes_btn_easy:hover, #spongebob_btn:hover, #cars_btn:hover,#cars_btn_easy:hover ,#cars_btn_hard:hover , #menu:hover, #spongebob_btn_easy:hover , #spongebob_btn_hard:hover , #random_btn:hover , #tictactoe_btn:hover   {
+#shoes_btn:hover,#shoes_btn_hard:hover,#shoes_btn_easy:hover, #spongebob_btn:hover, #cars_btn:hover,#cars_btn_easy:hover ,#cars_btn_hard:hover , #menu:hover, #spongebob_btn_easy:hover , #spongebob_btn_hard:hover , #random_btn:hover , #tictactoe_btn:hover , .mr:hover  {
 
   box-shadow: 0 10px 50px #afe0f5;
 }
@@ -263,7 +263,6 @@ body {
 
 .mr {
   margin-left: 90%;
-  margin-top: 13%;
+  margin-top: 7%;
   border-radius: 50px;
-  box-shadow: 0 10px 30px #afe0f5;
 }

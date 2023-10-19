@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'PLAYERO_WON':
                 Swal.fire({
                     title: 'Player O won!',
-                    imageUrl: 'images/player_2_wins.png',
+                    imageUrl: 'imagesplayer_2_wins.png',
                     imageWidth: 400,
                     imageHeight: 200,
                     imageAlt: 'Custom image',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'PLAYERX_WON':
                 Swal.fire({
                     title: 'Player X won!',
-                    imageUrl: 'images/player_1_wins.png',
+                    imageUrl: 'player_1_wins.png',
                     imageWidth: 400,
                     imageHeight: 200,
                     imageAlt: 'Custom image',
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'TIE':
                 Swal.fire({
                     title: "It's a TIE !",
-                    imageUrl: 'images/tie_game.png',
+                    imageUrl: 'tie_game.png',
                     imageWidth: 400,
                     imageHeight: 200,
                     imageAlt: 'Custom image',

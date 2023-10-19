@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todos Get</title>
+    <style>
+        /* Add border styles to the table */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Comments</h1>
+    <label for="commentsId">Enter ID: </label><input type="number" id="commentsId"><br>
+    <button id="get-button" onclick="fetch_data()">GET Comments</button> <br />
+    <button id="get-button" onclick="fetch_data_async()">GET Comments ASYNC</button> <br>
+    <table id="todos-table">
+        <thead>
+            <tr>
+                <th>Post ID</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Body</th>
+
+            </tr>
+        </thead>
+        <tbody id="comments-list" style="display: visible;"></tbody>
+    </table>
+    <script>
+        function fetch_data() {
+            const commentsList = document.getElementById('comments-list')
+            console.log(commentsList);
+            commentsList.innerHTML = ""
+            const commentsId = document.getElementById('commentsId').value
+            const url = `http://localhost:3000/comments/${commentsId}`
+
+            fetch(url).then(response => {
+                if (!response.ok) {
+                    alert('failure') // 1 -- failure
+                }
+                else {
+                    return response.json() // 2 -- success
+                }
+            }).then(comment => {
+                console.log(comment);
+                    const row = document.createElement('tr')
+                    row.innerHTML = `<td>${comment.postId}</td>
+                                     <td>${comment.id}</td>
+                                     <td>${comment.name}</td>
+                                     <td>${comment.email}</td>
+                                     <td>${comment.body}</td>`
+                    console.log(row);
+                    commentsList.appendChild(row)
+                });
+           
+        }
+
+      
+        async function fetch_data_async() {
+            const commentsList = document.getElementById('comments-list')
+            console.log(commentsList);
+            commentsList.innerHTML = ""
+            const commentsId = document.getElementById('commentsId').value
+            const url = `http://localhost:3000/comments/${commentsId}`
+
+            const response = await fetch(url)
+            if (!response.ok) {
+                alert('failure') // 1 -- failure
+                return
+            }
+            const comment = await response.json() // 2 -- success
+            console.log(comment);
+                const row = document.createElement('tr')
+                row.innerHTML = `    <td>${comment.postId}</td>
+                                     <td>${comment.id}</td>
+                                     <td>${comment.name}</td>
+                                     <td>${comment.email}</td>
+                                     <td>${comment.body}</td>`
+                console.log(row);
+                commentsList.appendChild(row)
+            ;
+        }
+    </script>
+</body>
+
+</html>
