@@ -6,6 +6,7 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -56,7 +57,6 @@ function disableCards() {
 
 function unflipCards() {
     if (!firstCard || !secondCard) {
-        // Check if firstCard or secondCard is null or undefined
         resetBoard();
         return;
     }
@@ -78,7 +78,7 @@ function shuffle() {
     });
     cards4.forEach(card => card.addEventListener('click', flipCard));
     cards6.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 16);
+        let randomPos = Math.floor(Math.random() * 36);
         card.style.order = randomPos;
     });
     cards6.forEach(card => card.addEventListener('click', flipCard));
@@ -97,12 +97,14 @@ function reset_btn() {
         updateScores();
 
     }, 500);
+    
 }
 
 
 
 function updateScores() {
     document.getElementById('clicks').innerText = clicks;
+
 }
 
 cards4.forEach(card => card.addEventListener('click', flipCard));
