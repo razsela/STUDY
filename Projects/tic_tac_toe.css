@@ -22,7 +22,7 @@
     color: rgb(10, 255, 67);
     text-align: center;
     font-size: 40px;
-    margin-top: 8%;
+    margin-top: 5%;
 
 }
 #memory_game_btn {
@@ -89,6 +89,7 @@
 
 .container {
     margin: 0 auto;
+    margin-top: -5%;
     display: grid;
     background-color: #0400ff1e;
     grid-template-columns: 33% 33% 33%;
