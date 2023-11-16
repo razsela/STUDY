@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WhatsApp</title>
+    <link rel="stylesheet" href="WhatsApp.css">
+    <script src="WhatsApp.js"></script>
+</head>
+<body>
+
+        <div id="messages">
+        <label for="text">Enter Name:</label>
+        <input type="text" id="name" required>
+        <button id="post_name" onclick="post_data_async()">Apply</button><br>
+    <br>
+        <label for="text">Enter Text:</label>
+        <input type="text" id="text" required>
+        <button id="post_message" onclick="post_data_async()">Send:</button> <br />
+    </div>
+
+    <button id="show_messages" onclick="fetch_data_async()"></button>
+      <br>
+        <table id="todos-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody id="messages" style="display: visible;"></tbody>
+        </table>
+</body>
+</html>

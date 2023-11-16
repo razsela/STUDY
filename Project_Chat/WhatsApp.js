@@ -1,7 +1,7 @@
 async function fetch_data_async() {
-    const messages = document.getElementById('messages')
-    console.log(messagesList);
-    messagesList.innerHTML = ""
+    const usersList = document.getElementById('messages')
+    console.log(usersList);
+    usersList.innerHTML = ""
 
     const url = 'http://localhost:3000/users'
 
@@ -12,13 +12,13 @@ async function fetch_data_async() {
     }
     const data = await response.json() // 2 -- success
     console.log(data);
-    data.forEach(message => {
+    data.forEach(user => {
         const row = document.createElement('tr')
-        row.innerHTML = `
-                             <td>${message.name}</td>
-                             <td>${message.body}</td>`
+        row.innerHTML = `   
+                             <td>${user.username}</td>
+                             <td>${user.text}</td> `
         console.log(row);
-        messagesList.appendChild(row)
+        usersList.appendChild(row)
     });
 }
 async function post_data_async() {
@@ -60,4 +60,10 @@ async function post_data_async() {
         });
 
     }
+}
+const show_messages = document.getElementById('show_messages')
+
+function input_messages(){
+    const url = 'http://localhost:3000/users'
+
 }
