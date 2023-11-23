@@ -1,0 +1,16 @@
+{
+  "name": "tddtests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mylist.js",
+  "scripts": {
+    "test": "mocha *.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "should": "^13.2.3"
+  }
+}
