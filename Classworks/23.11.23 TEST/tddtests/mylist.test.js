@@ -64,6 +64,5 @@ describe('Testing basic functionallisty of the list', () => {
         const actual = mylist.count()
         assert.strictEqual(expected, actual)
     }) 
-chai 
-should
+
 })
