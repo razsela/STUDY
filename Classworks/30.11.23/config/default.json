@@ -1,0 +1,14 @@
+{
+    "db_local": {
+        "host": "127.0.0.1",
+        "user": "postgres",
+        "password": "admin",
+        "database": "postgres"
+    },
+    "db_cloud": {
+        "host": "dpg-cllj4vfq7omc73cmmun0-a.oregon-postgres.render.com",
+        "user": "raz_cloud_user",
+        "password": "TfQ5kZFj3znuB29T6npiW8HNPODMAmav",
+        "database": "raz_cloud"
+    }
+}
